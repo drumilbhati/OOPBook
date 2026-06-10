@@ -49,13 +49,15 @@ From a design perspective, if you find yourself with deeply nested `if-else` or 
 > **Design Note:** Use `switch` for simple branching on enums or constants. Use Polymorphism for complex behavioral branching.
 
 <div class="quiz-container">
-    <div class="quiz-question">Which Java version introduced the 'arrow' (->) syntax for switch expressions as a standard feature?</div>
-    <ul class="quiz-options">
-        <li class="quiz-option"><input type="radio" name="q_cf_1" id="q_cf_1_a" data-correct="false"><label for="q_cf_1_a">Java 8</label></li>
-        <li class="quiz-option"><input type="radio" name="q_cf_1" id="q_cf_1_b" data-correct="false"><label for="q_cf_1_b">Java 11</label></li>
-        <li class="quiz-option"><input type="radio" name="q_cf_1" id="q_cf_1_c" data-correct="true"><label for="q_cf_1_c">Java 14</label></li>
-        <li class="quiz-option"><input type="radio" name="q_cf_1" id="q_cf_1_d" data-correct="false"><label for="q_cf_1_d">Java 17</label></li>
-    </ul>
-    <button class="quiz-check-btn">Check Answer</button>
-    <div class="quiz-feedback"></div>
+    <div class="quiz-question-wrapper">
+        <div class="quiz-question">1. Which Java version introduced the 'arrow' (->) syntax for switch expressions as a standard feature? <span class="quiz-feedback-inline"></span></div>
+        <ul class="quiz-options">
+            <li class="quiz-option"><input type="radio" name="q_cf_1" id="q_cf_1_a" data-correct="false"><label for="q_cf_1_a">Java 8</label></li>
+            <li class="quiz-option"><input type="radio" name="q_cf_1" id="q_cf_1_b" data-correct="false"><label for="q_cf_1_b">Java 11</label></li>
+            <li class="quiz-option"><input type="radio" name="q_cf_1" id="q_cf_1_c" data-correct="true"><label for="q_cf_1_c">Java 14</label></li>
+            <li class="quiz-option"><input type="radio" name="q_cf_1" id="q_cf_1_d" data-correct="false"><label for="q_cf_1_d">Java 17</label></li>
+        </ul>
+    </div>
+    <button class="quiz-check-btn">Check Answers</button>
+    <div class="quiz-feedback-main"></div>
 </div>

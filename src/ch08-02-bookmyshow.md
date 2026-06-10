@@ -121,37 +121,39 @@ In the implementation above, we used `ReentrantLock` at the `Seat` level to ensu
 ## Module Quiz
 
 <div class="quiz-container">
-    <div class="quiz-question">1. What is the best way to handle "temporary" locks (seats held for 10 mins during payment)?</div>
-    <ul class="quiz-options">
-        <li class="quiz-option"><input type="radio" name="q_ch08_02_1" id="q_ch08_02_1_a" data-correct="false"><label for="q_ch08_02_1_a">A) Permanent database update to 'BOOKED'.</label></li>
-        <li class="quiz-option"><input type="radio" name="q_ch08_02_1" id="q_ch08_02_1_b" data-correct="true"><label for="q_ch08_02_1_b">B) Using a TTL (Time-To-Live) cache or a background job to release expired locks.</label></li>
-        <li class="quiz-option"><input type="radio" name="q_ch08_02_1" id="q_ch08_02_1_c" data-correct="false"><label for="q_ch08_02_1_c">C) Asking the user to pay faster.</label></li>
-        <li class="quiz-option"><input type="radio" name="q_ch08_02_1" id="q_ch08_02_1_d" data-correct="false"><label for="q_ch08_02_1_d">D) Locking the entire Theater table.</label></li>
-    </ul>
-    <button class="quiz-check-btn">Check Answer</button>
-    <div class="quiz-feedback"></div>
-</div>
+    <div class="quiz-question-wrapper">
+        <div class="quiz-question">1. What is the best way to handle "temporary" locks (seats held for 10 mins during payment)?</div>
+        <ul class="quiz-options">
+            <li class="quiz-option"><input type="radio" name="q_ch08_02_1" id="q_ch08_02_1_a" data-correct="false"><label for="q_ch08_02_1_a">A) Permanent database update to 'BOOKED'.</label></li>
+            <li class="quiz-option"><input type="radio" name="q_ch08_02_1" id="q_ch08_02_1_b" data-correct="true"><label for="q_ch08_02_1_b">B) Using a TTL (Time-To-Live) cache or a background job to release expired locks.</label></li>
+            <li class="quiz-option"><input type="radio" name="q_ch08_02_1" id="q_ch08_02_1_c" data-correct="false"><label for="q_ch08_02_1_c">C) Asking the user to pay faster.</label></li>
+            <li class="quiz-option"><input type="radio" name="q_ch08_02_1" id="q_ch08_02_1_d" data-correct="false"><label for="q_ch08_02_1_d">D) Locking the entire Theater table.</label></li>
+        </ul>
+        <div class="quiz-feedback"></div>
+    </div>
 
-<div class="quiz-container">
-    <div class="quiz-question">2. To improve search performance for movies in a specific city, which technique is most effective?</div>
-    <ul class="quiz-options">
-        <li class="quiz-option"><input type="radio" name="q_ch08_02_2" id="q_ch08_02_2_a" data-correct="false"><label for="q_ch08_02_2_a">A) Full table scan of all movies.</label></li>
-        <li class="quiz-option"><input type="radio" name="q_ch08_02_2" id="q_ch08_02_2_b" data-correct="true"><label for="q_ch08_02_2_b">B) Database Indexing on `CityID` and `MovieID`.</label></li>
-        <li class="quiz-option"><input type="radio" name="q_ch08_02_2" id="q_ch08_02_2_c" data-correct="false"><label for="q_ch08_02_2_c">C) Storing everything in a single JSON file.</label></li>
-        <li class="quiz-option"><input type="radio" name="q_ch08_02_2" id="q_ch08_02_2_d" data-correct="false"><label for="q_ch08_02_2_d">D) Disabling search during peak hours.</label></li>
-    </ul>
-    <button class="quiz-check-btn">Check Answer</button>
-    <div class="quiz-feedback"></div>
-</div>
+    <div class="quiz-question-wrapper">
+        <div class="quiz-question">2. To improve search performance for movies in a specific city, which technique is most effective?</div>
+        <ul class="quiz-options">
+            <li class="quiz-option"><input type="radio" name="q_ch08_02_2" id="q_ch08_02_2_a" data-correct="false"><label for="q_ch08_02_2_a">A) Full table scan of all movies.</label></li>
+            <li class="quiz-option"><input type="radio" name="q_ch08_02_2" id="q_ch08_02_2_b" data-correct="true"><label for="q_ch08_02_2_b">B) Database Indexing on `CityID` and `MovieID`.</label></li>
+            <li class="quiz-option"><input type="radio" name="q_ch08_02_2" id="q_ch08_02_2_c" data-correct="false"><label for="q_ch08_02_2_c">C) Storing everything in a single JSON file.</label></li>
+            <li class="quiz-option"><input type="radio" name="q_ch08_02_2" id="q_ch08_02_2_d" data-correct="false"><label for="q_ch08_02_2_d">D) Disabling search during peak hours.</label></li>
+        </ul>
+        <div class="quiz-feedback"></div>
+    </div>
 
-<div class="quiz-container">
-    <div class="quiz-question">3. In a distributed environment, why is `synchronized` keyword in Java insufficient for seat booking?</div>
-    <ul class="quiz-options">
-        <li class="quiz-option"><input type="radio" name="q_ch08_02_3" id="q_ch08_02_3_a" data-correct="false"><label for="q_ch08_02_3_a">A) It is too slow.</label></li>
-        <li class="quiz-option"><input type="radio" name="q_ch08_02_3" id="q_ch08_02_3_b" data-correct="true"><label for="q_ch08_02_3_b">B) It only works within a single JVM, not across multiple application instances.</label></li>
-        <li class="quiz-option"><input type="radio" name="q_ch08_02_3" id="q_ch08_02_3_c" data-correct="false"><label for="q_ch08_02_3_c">C) It causes deadlocks always.</label></li>
-        <li class="quiz-option"><input type="radio" name="q_ch08_02_3" id="q_ch08_02_3_d" data-correct="false"><label for="q_ch08_02_3_d">D) It is deprecated.</label></li>
-    </ul>
+    <div class="quiz-question-wrapper">
+        <div class="quiz-question">3. In a distributed environment, why is `synchronized` keyword in Java insufficient for seat booking?</div>
+        <ul class="quiz-options">
+            <li class="quiz-option"><input type="radio" name="q_ch08_02_3" id="q_ch08_02_3_a" data-correct="false"><label for="q_ch08_02_3_a">A) It is too slow.</label></li>
+            <li class="quiz-option"><input type="radio" name="q_ch08_02_3" id="q_ch08_02_3_b" data-correct="true"><label for="q_ch08_02_3_b">B) It only works within a single JVM, not across multiple application instances.</label></li>
+            <li class="quiz-option"><input type="radio" name="q_ch08_02_3" id="q_ch08_02_3_c" data-correct="false"><label for="q_ch08_02_3_c">C) It causes deadlocks always.</label></li>
+            <li class="quiz-option"><input type="radio" name="q_ch08_02_3" id="q_ch08_02_3_d" data-correct="false"><label for="q_ch08_02_3_d">D) It is deprecated.</label></li>
+        </ul>
+        <div class="quiz-feedback"></div>
+    </div>
+
+    <div class="quiz-feedback-main"></div>
     <button class="quiz-check-btn">Check Answer</button>
-    <div class="quiz-feedback"></div>
 </div>

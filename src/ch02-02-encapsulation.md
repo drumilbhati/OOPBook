@@ -38,13 +38,18 @@ You might ask: "Why not just make the field public?"
 > **Senior Perspective:** Over-using getters/setters can lead to an "Anemic Domain Model" where objects are just data bags. Aim for "Tell, Don't Ask"—tell the object what to do, rather than asking for its data to do it yourself.
 
 <div class="quiz-container">
-    <div class="quiz-question">Which access modifier allows access within the same package and to subclasses in different packages?</div>
-    <ul class="quiz-options">
-        <li class="quiz-option"><input type="radio" name="q_enc_1" id="q_enc_1_a" data-correct="false"><label for="q_enc_1_a">private</label></li>
-        <li class="quiz-option"><input type="radio" name="q_enc_1" id="q_enc_1_b" data-correct="false"><label for="q_enc_1_b">default</label></li>
-        <li class="quiz-option"><input type="radio" name="q_enc_1" id="q_enc_1_c" data-correct="true"><label for="q_enc_1_c">protected</label></li>
-        <li class="quiz-option"><input type="radio" name="q_enc_1" id="q_enc_1_d" data-correct="false"><label for="q_enc_1_d">public</label></li>
-    </ul>
-    <button class="quiz-check-btn">Check Answer</button>
-    <div class="quiz-feedback"></div>
+    <div class="quiz-question-wrapper">
+        <div class="quiz-question">Which access modifier allows access within the same package and to subclasses in different packages?</div>
+        <ul class="quiz-options">
+            <li class="quiz-option"><input type="radio" name="q_enc_1" id="q_enc_1_a" data-correct="false"><label for="q_enc_1_a">private</label></li>
+            <li class="quiz-option"><input type="radio" name="q_enc_1" id="q_enc_1_b" data-correct="false"><label for="q_enc_1_b">default</label></li>
+            <li class="quiz-option"><input type="radio" name="q_enc_1" id="q_enc_1_c" data-correct="true"><label for="q_enc_1_c">protected</label></li>
+            <li class="quiz-option"><input type="radio" name="q_enc_1" id="q_enc_1_d" data-correct="false"><label for="q_enc_1_d">public</label></li>
+        </ul>
+        <div class="quiz-feedback"></div>
+    </div>
+    <div class="quiz-feedback-main">
+        <button class="quiz-check-btn">Check Answer</button>
+        <p class="quiz-result"></p>
+    </div>
 </div>

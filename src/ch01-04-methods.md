@@ -27,13 +27,15 @@ void modify(int x, Balloon b) {
 > **Best Practice:** Keep method scopes small. This ensures Stack frames are cleared quickly and helps the JIT compiler optimize your code.
 
 <div class="quiz-container">
-    <div class="quiz-question">In Java, what happens when you pass an object to a method?</div>
-    <ul class="quiz-options">
-        <li class="quiz-option"><input type="radio" name="q_meth_1" id="q_meth_1_a" data-correct="false"><label for="q_meth_1_a">A copy of the entire object is created on the Stack.</label></li>
-        <li class="quiz-option"><input type="radio" name="q_meth_1" id="q_meth_1_b" data-correct="true"><label for="q_meth_1_b">A copy of the reference (memory address) is passed by value.</label></li>
-        <li class="quiz-option"><input type="radio" name="q_meth_1" id="q_meth_1_c" data-correct="false"><label for="q_meth_1_c">The original reference is used (Pass-by-Reference).</label></li>
-        <li class="quiz-option"><input type="radio" name="q_meth_1" id="q_meth_1_d" data-correct="false"><label for="q_meth_1_d">The object is moved from the caller's stack to the callee's stack.</label></li>
-    </ul>
-    <button class="quiz-check-btn">Check Answer</button>
-    <div class="quiz-feedback"></div>
+    <div class="quiz-question-wrapper">
+        <div class="quiz-question">1. In Java, what happens when you pass an object to a method? <span class="quiz-feedback-inline"></span></div>
+        <ul class="quiz-options">
+            <li class="quiz-option"><input type="radio" name="q_meth_1" id="q_meth_1_a" data-correct="false"><label for="q_meth_1_a">A copy of the entire object is created on the Stack.</label></li>
+            <li class="quiz-option"><input type="radio" name="q_meth_1" id="q_meth_1_b" data-correct="true"><label for="q_meth_1_b">A copy of the reference (memory address) is passed by value.</label></li>
+            <li class="quiz-option"><input type="radio" name="q_meth_1" id="q_meth_1_c" data-correct="false"><label for="q_meth_1_c">The original reference is used (Pass-by-Reference).</label></li>
+            <li class="quiz-option"><input type="radio" name="q_meth_1" id="q_meth_1_d" data-correct="false"><label for="q_meth_1_d">The object is moved from the caller's stack to the callee's stack.</label></li>
+        </ul>
+    </div>
+    <button class="quiz-check-btn">Check Answers</button>
+    <div class="quiz-feedback-main"></div>
 </div>

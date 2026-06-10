@@ -53,34 +53,30 @@ Indicates how many instances of one class are linked to one instance of another.
 ## Module Quiz
 
 <div class="quiz-container">
-    <div class="quiz-question">1. Which symbol represents a Private field in UML?</div>
-    <ul class="quiz-options">
-        <li class="quiz-option"><input type="radio" name="q_ch04_02_1" id="q_ch04_02_1_a" data-correct="false"><label for="q_ch04_02_1_a">A) +</label></li>
-        <li class="quiz-option"><input type="radio" name="q_ch04_02_1" id="q_ch04_02_1_b" data-correct="true"><label for="q_ch04_02_1_b">B) -</label></li>
-        <li class="quiz-option"><input type="radio" name="q_ch04_02_1" id="q_ch04_02_1_c" data-correct="false"><label for="q_ch04_02_1_c">C) #</label></li>
-    </ul>
-    <button class="quiz-check-btn">Check Answer</button>
-    <div class="quiz-feedback"></div>
-</div>
-
-<div class="quiz-container">
-    <div class="quiz-question">2. What is the difference between Aggregation and Composition?</div>
-    <ul class="quiz-options">
-        <li class="quiz-option"><input type="radio" name="q_ch04_02_2" id="q_ch04_02_2_a" data-correct="false"><label for="q_ch04_02_2_a">A) Aggregation is for classes, Composition is for interfaces.</label></li>
-        <li class="quiz-option"><input type="radio" name="q_ch04_02_2" id="q_ch04_02_2_b" data-correct="true"><label for="q_ch04_02_2_b">B) In Composition, the child cannot exist without the parent; in Aggregation, it can.</label></li>
-        <li class="quiz-option"><input type="radio" name="q_ch04_02_2" id="q_ch04_02_2_c" data-correct="false"><label for="q_ch04_02_2_c">C) There is no difference.</label></li>
-    </ul>
-    <button class="quiz-check-btn">Check Answer</button>
-    <div class="quiz-feedback"></div>
-</div>
-
-<div class="quiz-container">
-    <div class="quiz-question">3. A solid line with a hollow arrow represents:</div>
-    <ul class="quiz-options">
-        <li class="quiz-option"><input type="radio" name="q_ch04_02_3" id="q_ch04_02_3_a" data-correct="false"><label for="q_ch04_02_3_a">A) Composition.</label></li>
-        <li class="quiz-option"><input type="radio" name="q_ch04_02_3" id="q_ch04_02_3_b" data-correct="true"><label for="q_ch04_02_3_b">B) Generalization (Inheritance).</label></li>
-        <li class="quiz-option"><input type="radio" name="q_ch04_02_3" id="q_ch04_02_3_c" data-correct="false"><label for="q_ch04_02_3_c">C) Dependency.</label></li>
-    </ul>
-    <button class="quiz-check-btn">Check Answer</button>
-    <div class="quiz-feedback"></div>
+    <div class="quiz-question-wrapper">
+        <div class="quiz-question">1. Which symbol represents a Private field in UML? <span class="quiz-feedback-inline"></span></div>
+        <ul class="quiz-options">
+            <li class="quiz-option"><input type="radio" name="q_ch04_02_1" id="q_ch04_02_1_a" data-correct="false"><label for="q_ch04_02_1_a">A) +</label></li>
+            <li class="quiz-option"><input type="radio" name="q_ch04_02_1" id="q_ch04_02_1_b" data-correct="true"><label for="q_ch04_02_1_b">B) -</label></li>
+            <li class="quiz-option"><input type="radio" name="q_ch04_02_1" id="q_ch04_02_1_c" data-correct="false"><label for="q_ch04_02_1_c">C) #</label></li>
+        </ul>
+    </div>
+    <div class="quiz-question-wrapper">
+        <div class="quiz-question">2. What is the difference between Aggregation and Composition? <span class="quiz-feedback-inline"></span></div>
+        <ul class="quiz-options">
+            <li class="quiz-option"><input type="radio" name="q_ch04_02_2" id="q_ch04_02_2_a" data-correct="false"><label for="q_ch04_02_2_a">A) Aggregation is for classes, Composition is for interfaces.</label></li>
+            <li class="quiz-option"><input type="radio" name="q_ch04_02_2" id="q_ch04_02_2_b" data-correct="true"><label for="q_ch04_02_2_b">B) In Composition, the child cannot exist without the parent; in Aggregation, it can.</label></li>
+            <li class="quiz-option"><input type="radio" name="q_ch04_02_2" id="q_ch04_02_2_c" data-correct="false"><label for="q_ch04_02_2_c">C) There is no difference.</label></li>
+        </ul>
+    </div>
+    <div class="quiz-question-wrapper">
+        <div class="quiz-question">3. A solid line with a hollow arrow represents: <span class="quiz-feedback-inline"></span></div>
+        <ul class="quiz-options">
+            <li class="quiz-option"><input type="radio" name="q_ch04_02_3" id="q_ch04_02_3_a" data-correct="false"><label for="q_ch04_02_3_a">A) Composition.</label></li>
+            <li class="quiz-option"><input type="radio" name="q_ch04_02_3" id="q_ch04_02_3_b" data-correct="true"><label for="q_ch04_02_3_b">B) Generalization (Inheritance).</label></li>
+            <li class="quiz-option"><input type="radio" name="q_ch04_02_3" id="q_ch04_02_3_c" data-correct="false"><label for="q_ch04_02_3_c">C) Dependency.</label></li>
+        </ul>
+    </div>
+    <button class="quiz-check-btn">Check Answers</button>
+    <div class="quiz-feedback-main"></div>
 </div>

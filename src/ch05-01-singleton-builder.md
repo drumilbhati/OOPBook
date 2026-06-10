@@ -134,44 +134,37 @@ Computer myPC = new Computer.Builder("500GB", "16GB")
 ## Module Quiz
 
 <div class="quiz-container">
-    <div class="quiz-question">1. Why is the volatile keyword necessary in the double-checked locking Singleton implementation?</div>
-    <ul class="quiz-options">
-        <li class="quiz-option"><input type="radio" name="q05_01_1" id="q05_01_1_a" data-correct="false"><label for="q05_01_1_a">A) To make the getInstance() method faster.</label></li>
-        <li class="quiz-option"><input type="radio" name="q05_01_1" id="q05_01_1_b" data-correct="true"><label for="q05_01_1_b">B) To prevent instruction reordering that could lead to a partially initialized instance.</label></li>
-        <li class="quiz-option"><input type="radio" name="q05_01_1" id="q05_01_1_c" data-correct="false"><label for="q05_01_1_c">C) To ensure the constructor is private.</label></li>
-    </ul>
-    <button class="quiz-check-btn">Check Answer</button>
-    <div class="quiz-feedback"></div>
-</div>
-
-<div class="quiz-container">
-    <div class="quiz-question">2. How does an enum protect against reflection-based attacks for Singletons?</div>
-    <ul class="quiz-options">
-        <li class="quiz-option"><input type="radio" name="q05_01_2" id="q05_01_2_a" data-correct="false"><label for="q05_01_2_a">A) By making all methods static.</label></li>
-        <li class="quiz-option"><input type="radio" name="q05_01_2" id="q05_01_2_b" data-correct="true"><label for="q05_01_2_b">B) The JVM handles enum instantiation and explicitly prevents reflection-based creation of additional instances.</label></li>
-        <li class="quiz-option"><input type="radio" name="q05_01_2" id="q05_01_2_c" data-correct="false"><label for="q05_01_2_c">C) Enums cannot have methods, so they are safe.</label></li>
-    </ul>
-    <button class="quiz-check-btn">Check Answer</button>
-    <div class="quiz-feedback"></div>
-</div>
-
-<div class="quiz-container">
-    <div class="quiz-question">3. What is the primary advantage of the Builder pattern over using a constructor with many parameters?</div>
-    <ul class="quiz-options">
-        <li class="quiz-option"><input type="radio" name="q05_01_3" id="q05_01_3_a" data-correct="false"><label for="q05_01_3_a">A) It makes the code run faster.</label></li>
-        <li class="quiz-option"><input type="radio" name="q05_01_3" id="q05_01_3_b" data-correct="true"><label for="q05_01_3_b">B) It provides a readable, fluent API for creating objects with many optional parameters.</label></li>
-        <li class="quiz-option"><input type="radio" name="q05_01_3" id="q05_01_3_c" data-correct="false"><label for="q05_01_3_c">C) It eliminates the need for private fields.</label></li>
-    </ul>
-    <button class="quiz-check-btn">Check Answer</button>
-    <div class="quiz-feedback"></div>
-</div>
-
-<div class="quiz-container">
-    <div class="quiz-question">4. True/False: The Builder pattern is primarily used for objects that are simple to instantiate.</div>
-    <ul class="quiz-options">
-        <li class="quiz-option"><input type="radio" name="q05_01_4" id="q05_01_4_a" data-correct="false"><label for="q05_01_4_a">A) True</label></li>
-        <li class="quiz-option"><input type="radio" name="q05_01_4" id="q05_01_4_b" data-correct="true"><label for="q05_01_4_b">B) False</label></li>
-    </ul>
-    <button class="quiz-check-btn">Check Answer</button>
-    <div class="quiz-feedback"></div>
+    <div class="quiz-question-wrapper">
+        <div class="quiz-question">1. Why is the volatile keyword necessary in the double-checked locking Singleton implementation? <span class="quiz-feedback-inline"></span></div>
+        <ul class="quiz-options">
+            <li class="quiz-option"><input type="radio" name="q05_01_1" id="q05_01_1_a" data-correct="false"><label for="q05_01_1_a">A) To make the getInstance() method faster.</label></li>
+            <li class="quiz-option"><input type="radio" name="q05_01_1" id="q05_01_1_b" data-correct="true"><label for="q05_01_1_b">B) To prevent instruction reordering that could lead to a partially initialized instance.</label></li>
+            <li class="quiz-option"><input type="radio" name="q05_01_1" id="q05_01_1_c" data-correct="false"><label for="q05_01_1_c">C) To ensure the constructor is private.</label></li>
+        </ul>
+    </div>
+    <div class="quiz-question-wrapper">
+        <div class="quiz-question">2. How does an enum protect against reflection-based attacks for Singletons? <span class="quiz-feedback-inline"></span></div>
+        <ul class="quiz-options">
+            <li class="quiz-option"><input type="radio" name="q05_01_2" id="q05_01_2_a" data-correct="false"><label for="q05_01_2_a">A) By making all methods static.</label></li>
+            <li class="quiz-option"><input type="radio" name="q05_01_2" id="q05_01_2_b" data-correct="true"><label for="q05_01_2_b">B) The JVM handles enum instantiation and explicitly prevents reflection-based creation of additional instances.</label></li>
+            <li class="quiz-option"><input type="radio" name="q05_01_2" id="q05_01_2_c" data-correct="false"><label for="q05_01_2_c">C) Enums cannot have methods, so they are safe.</label></li>
+        </ul>
+    </div>
+    <div class="quiz-question-wrapper">
+        <div class="quiz-question">3. What is the primary advantage of the Builder pattern over using a constructor with many parameters? <span class="quiz-feedback-inline"></span></div>
+        <ul class="quiz-options">
+            <li class="quiz-option"><input type="radio" name="q05_01_3" id="q05_01_3_a" data-correct="false"><label for="q05_01_3_a">A) It makes the code run faster.</label></li>
+            <li class="quiz-option"><input type="radio" name="q05_01_3" id="q05_01_3_b" data-correct="true"><label for="q05_01_3_b">B) It provides a readable, fluent API for creating objects with many optional parameters.</label></li>
+            <li class="quiz-option"><input type="radio" name="q05_01_3" id="q05_01_3_c" data-correct="false"><label for="q05_01_3_c">C) It eliminates the need for private fields.</label></li>
+        </ul>
+    </div>
+    <div class="quiz-question-wrapper">
+        <div class="quiz-question">4. True/False: The Builder pattern is primarily used for objects that are simple to instantiate. <span class="quiz-feedback-inline"></span></div>
+        <ul class="quiz-options">
+            <li class="quiz-option"><input type="radio" name="q05_01_4" id="q05_01_4_a" data-correct="false"><label for="q05_01_4_a">A) True</label></li>
+            <li class="quiz-option"><input type="radio" name="q05_01_4" id="q05_01_4_b" data-correct="true"><label for="q05_01_4_b">B) False</label></li>
+        </ul>
+    </div>
+    <button class="quiz-check-btn">Check Answers</button>
+    <div class="quiz-feedback-main"></div>
 </div>

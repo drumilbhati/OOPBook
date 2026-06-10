@@ -85,23 +85,56 @@ class ControlTower implements AirTrafficControl {
 
 ## Module Quiz
 
-1. Why does the Iterator pattern help in making code more generic?
-2. In the Mediator pattern, how is the "Law of Demeter" (don't talk to strangers) applied?
-3. What happens if the Mediator object itself becomes too complex? (Hint: The "God Object" anti-pattern).
-4. True/False: The Iterator pattern allows for multiple simultaneous traversals of the same collection.
-
----
-### Module Quiz
-
 <div class="quiz-container">
-    <div class="quiz-question">What is the main purpose of the Mediator pattern?</div>
-    <ul class="quiz-options">
-        <li class="quiz-option"><input type="radio" name="q07_03" id="q07_03_a" data-correct="false"><label for="q07_03_a">To provide a way to access elements of a collection sequentially.</label></li>
-        <li class="quiz-option"><input type="radio" name="q07_03" id="q07_03_b" data-correct="true"><label for="q07_03_b">To reduce direct dependencies between objects by forcing them to communicate through a central mediator.</label></li>
-        <li class="quiz-option"><input type="radio" name="q07_03" id="q07_03_c" data-correct="false"><label for="q07_03_c">To allow an object to notify many observers of state changes.</label></li>
-    </ul>
-    <button class="quiz-check-btn">Check Answer</button>
-    <div class="quiz-feedback"></div>
-</div>
+    <div class="quiz-question-wrapper">
+        <div class="quiz-question">1. Why does the Iterator pattern help in making code more generic?</div>
+        <ul class="quiz-options">
+            <li class="quiz-option"><input type="radio" name="q07_03_1" id="q07_03_1_a" data-correct="true"><label for="q07_03_1_a">A) It provides a uniform interface for traversing different collection types without exposing their internal structures.</label></li>
+            <li class="quiz-option"><input type="radio" name="q07_03_1" id="q07_03_1_b" data-correct="false"><label for="q07_03_1_b">B) It forces all collections to use arrays.</label></li>
+            <li class="quiz-option"><input type="radio" name="q07_03_1" id="q07_03_1_c" data-correct="false"><label for="q07_03_1_c">C) It eliminates the need for loops.</label></li>
+        </ul>
+        <div class="quiz-feedback"></div>
+    </div>
 
----
+    <div class="quiz-question-wrapper">
+        <div class="quiz-question">2. In the Mediator pattern, how is the "Law of Demeter" applied?</div>
+        <ul class="quiz-options">
+            <li class="quiz-option"><input type="radio" name="q07_03_2" id="q07_03_2_a" data-correct="true"><label for="q07_03_2_a">A) Objects only talk to the Mediator instead of knowing about and talking to each other directly.</label></li>
+            <li class="quiz-option"><input type="radio" name="q07_03_2" id="q07_03_2_b" data-correct="false"><label for="q07_03_2_b">B) Every object must talk to every other object.</label></li>
+            <li class="quiz-option"><input type="radio" name="q07_03_2" id="q07_03_2_c" data-correct="false"><label for="q07_03_2_c">C) The Mediator is forbidden from talking to other objects.</label></li>
+        </ul>
+        <div class="quiz-feedback"></div>
+    </div>
+
+    <div class="quiz-question-wrapper">
+        <div class="quiz-question">3. What happens if the Mediator object itself becomes too complex?</div>
+        <ul class="quiz-options">
+            <li class="quiz-option"><input type="radio" name="q07_03_3" id="q07_03_3_a" data-correct="false"><label for="q07_03_3_a">A) The system becomes faster.</label></li>
+            <li class="quiz-option"><input type="radio" name="q07_03_3" id="q07_03_3_b" data-correct="true"><label for="q07_03_3_b">B) It can become a "God Object" that is hard to maintain and understand.</label></li>
+            <li class="quiz-option"><input type="radio" name="q07_03_3" id="q07_03_3_c" data-correct="false"><label for="q07_03_3_c">C) It automatically splits into smaller mediators.</label></li>
+        </ul>
+        <div class="quiz-feedback"></div>
+    </div>
+
+    <div class="quiz-question-wrapper">
+        <div class="quiz-question">4. True/False: The Iterator pattern allows for multiple simultaneous traversals of the same collection.</div>
+        <ul class="quiz-options">
+            <li class="quiz-option"><input type="radio" name="q07_03_4" id="q07_03_4_a" data-correct="true"><label for="q07_03_4_a">A) True</label></li>
+            <li class="quiz-option"><input type="radio" name="q07_03_4" id="q07_03_4_b" data-correct="false"><label for="q07_03_4_b">B) False</label></li>
+        </ul>
+        <div class="quiz-feedback"></div>
+    </div>
+
+    <div class="quiz-question-wrapper">
+        <div class="quiz-question">5. What is the main purpose of the Mediator pattern?</div>
+        <ul class="quiz-options">
+            <li class="quiz-option"><input type="radio" name="q07_03_5" id="q07_03_5_a" data-correct="false"><label for="q07_03_5_a">A) To provide a way to access elements of a collection sequentially.</label></li>
+            <li class="quiz-option"><input type="radio" name="q07_03_5" id="q07_03_5_b" data-correct="true"><label for="q07_03_5_b">B) To reduce direct dependencies between objects by forcing them to communicate through a central mediator.</label></li>
+            <li class="quiz-option"><input type="radio" name="q07_03_5" id="q07_03_5_c" data-correct="false"><label for="q07_03_5_c">C) To allow an object to notify many observers of state changes.</label></li>
+        </ul>
+        <div class="quiz-feedback"></div>
+    </div>
+
+    <div class="quiz-feedback-main"></div>
+    <button class="quiz-check-btn">Check Answer</button>
+</div>

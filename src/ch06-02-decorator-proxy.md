@@ -108,55 +108,45 @@ class ProxyImage implements Image {
 ## Module Quiz
 
 <div class="quiz-container">
-    <div class="quiz-question">1. Which pattern is used to implement "Lazy Loading"?</div>
-    <ul class="quiz-options">
-        <li class="quiz-option"><input type="radio" name="q06_02_1" id="q06_02_1_a" data-correct="false"><label for="q06_02_1_a">A) Decorator</label></li>
-        <li class="quiz-option"><input type="radio" name="q06_02_1" id="q06_02_1_b" data-correct="true"><label for="q06_02_1_b">B) Proxy</label></li>
-        <li class="quiz-option"><input type="radio" name="q06_02_1" id="q06_02_1_c" data-correct="false"><label for="q06_02_1_c">C) Facade</label></li>
-    </ul>
-    <button class="quiz-check-btn">Check Answer</button>
-    <div class="quiz-feedback"></div>
-</div>
-
-<div class="quiz-container">
-    <div class="quiz-question">2. What is a common problem with using inheritance instead of the Decorator pattern for adding features?</div>
-    <ul class="quiz-options">
-        <li class="quiz-option"><input type="radio" name="q06_02_2" id="q06_02_2_a" data-correct="false"><label for="q06_02_2_a">A) It makes the code run slower.</label></li>
-        <li class="quiz-option"><input type="radio" name="q06_02_2" id="q06_02_2_b" data-correct="true"><label for="q06_02_2_b">B) Class explosion (having to create a new class for every possible combination of features).</label></li>
-        <li class="quiz-option"><input type="radio" name="q06_02_2" id="q06_02_2_c" data-correct="false"><label for="q06_02_2_c">C) Inheritance does not support polymorphism.</label></li>
-    </ul>
-    <button class="quiz-check-btn">Check Answer</button>
-    <div class="quiz-feedback"></div>
-</div>
-
-<div class="quiz-container">
-    <div class="quiz-question">3. How does a Protection Proxy differ from a Virtual Proxy?</div>
-    <ul class="quiz-options">
-        <li class="quiz-option"><input type="radio" name="q06_02_3" id="q06_02_3_a" data-correct="false"><label for="q06_02_3_a">A) Protection Proxy is for remote objects.</label></li>
-        <li class="quiz-option"><input type="radio" name="q06_02_3" id="q06_02_3_b" data-correct="true"><label for="q06_02_3_b">B) Protection Proxy controls access based on permissions, while Virtual Proxy handles lazy loading of expensive objects.</label></li>
-        <li class="quiz-option"><input type="radio" name="q06_02_3" id="q06_02_3_c" data-correct="false"><label for="q06_02_3_c">C) There is no difference.</label></li>
-    </ul>
-    <button class="quiz-check-btn">Check Answer</button>
-    <div class="quiz-feedback"></div>
-</div>
-
-<div class="quiz-container">
-    <div class="quiz-question">4. True/False: In the Decorator pattern, the decorator and the object it decorates must implement the same interface.</div>
-    <ul class="quiz-options">
-        <li class="quiz-option"><input type="radio" name="q06_02_4" id="q06_02_4_a" data-correct="true"><label for="q06_02_4_a">A) True</label></li>
-        <li class="quiz-option"><input type="radio" name="q06_02_4" id="q06_02_4_b" data-correct="false"><label for="q06_02_4_b">B) False</label></li>
-    </ul>
-    <button class="quiz-check-btn">Check Answer</button>
-    <div class="quiz-feedback"></div>
-</div>
-
-<div class="quiz-container">
-    <div class="quiz-question">5. Which pattern is specifically used to control access to an object, such as implementing permissions or lazy loading?</div>
-    <ul class="quiz-options">
-        <li class="quiz-option"><input type="radio" name="q06_02_5" id="q06_02_5_a" data-correct="false"><label for="q06_02_5_a">A) Decorator</label></li>
-        <li class="quiz-option"><input type="radio" name="q06_02_5" id="q06_02_5_b" data-correct="true"><label for="q06_02_5_b">B) Proxy</label></li>
-        <li class="quiz-option"><input type="radio" name="q06_02_5" id="q06_02_5_c" data-correct="false"><label for="q06_02_5_c">C) Composite</label></li>
-    </ul>
-    <button class="quiz-check-btn">Check Answer</button>
-    <div class="quiz-feedback"></div>
+    <div class="quiz-question-wrapper">
+        <div class="quiz-question">1. Which pattern is used to implement "Lazy Loading"? <span class="quiz-feedback-inline"></span></div>
+        <ul class="quiz-options">
+            <li class="quiz-option"><input type="radio" name="q06_02_1" id="q06_02_1_a" data-correct="false"><label for="q06_02_1_a">A) Decorator</label></li>
+            <li class="quiz-option"><input type="radio" name="q06_02_1" id="q06_02_1_b" data-correct="true"><label for="q06_02_1_b">B) Proxy</label></li>
+            <li class="quiz-option"><input type="radio" name="q06_02_1" id="q06_02_1_c" data-correct="false"><label for="q06_02_1_c">C) Facade</label></li>
+        </ul>
+    </div>
+    <div class="quiz-question-wrapper">
+        <div class="quiz-question">2. What is a common problem with using inheritance instead of the Decorator pattern for adding features? <span class="quiz-feedback-inline"></span></div>
+        <ul class="quiz-options">
+            <li class="quiz-option"><input type="radio" name="q06_02_2" id="q06_02_2_a" data-correct="false"><label for="q06_02_2_a">A) It makes the code run slower.</label></li>
+            <li class="quiz-option"><input type="radio" name="q06_02_2" id="q06_02_2_b" data-correct="true"><label for="q06_02_2_b">B) Class explosion (having to create a new class for every possible combination of features).</label></li>
+            <li class="quiz-option"><input type="radio" name="q06_02_2" id="q06_02_2_c" data-correct="false"><label for="q06_02_2_c">C) Inheritance does not support polymorphism.</label></li>
+        </ul>
+    </div>
+    <div class="quiz-question-wrapper">
+        <div class="quiz-question">3. How does a Protection Proxy differ from a Virtual Proxy? <span class="quiz-feedback-inline"></span></div>
+        <ul class="quiz-options">
+            <li class="quiz-option"><input type="radio" name="q06_02_3" id="q06_02_3_a" data-correct="false"><label for="q06_02_3_a">A) Protection Proxy is for remote objects.</label></li>
+            <li class="quiz-option"><input type="radio" name="q06_02_3" id="q06_02_3_b" data-correct="true"><label for="q06_02_3_b">B) Protection Proxy controls access based on permissions, while Virtual Proxy handles lazy loading of expensive objects.</label></li>
+            <li class="quiz-option"><input type="radio" name="q06_02_3" id="q06_02_3_c" data-correct="false"><label for="q06_02_3_c">C) There is no difference.</label></li>
+        </ul>
+    </div>
+    <div class="quiz-question-wrapper">
+        <div class="quiz-question">4. True/False: In the Decorator pattern, the decorator and the object it decorates must implement the same interface. <span class="quiz-feedback-inline"></span></div>
+        <ul class="quiz-options">
+            <li class="quiz-option"><input type="radio" name="q06_02_4" id="q06_02_4_a" data-correct="true"><label for="q06_02_4_a">A) True</label></li>
+            <li class="quiz-option"><input type="radio" name="q06_02_4" id="q06_02_4_b" data-correct="false"><label for="q06_02_4_b">B) False</label></li>
+        </ul>
+    </div>
+    <div class="quiz-question-wrapper">
+        <div class="quiz-question">5. Which pattern is specifically used to control access to an object, such as implementing permissions or lazy loading? <span class="quiz-feedback-inline"></span></div>
+        <ul class="quiz-options">
+            <li class="quiz-option"><input type="radio" name="q06_02_5" id="q06_02_5_a" data-correct="false"><label for="q06_02_5_a">A) Decorator</label></li>
+            <li class="quiz-option"><input type="radio" name="q06_02_5" id="q06_02_5_b" data-correct="true"><label for="q06_02_5_b">B) Proxy</label></li>
+            <li class="quiz-option"><input type="radio" name="q06_02_5" id="q06_02_5_c" data-correct="false"><label for="q06_02_5_c">C) Composite</label></li>
+        </ul>
+    </div>
+    <button class="quiz-check-btn">Check Answers</button>
+    <div class="quiz-feedback-main"></div>
 </div>

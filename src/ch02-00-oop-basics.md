@@ -25,15 +25,17 @@ There are four fundamental pillars of OOP:
 ### Module 2.0 Quiz
 
 <div class="quiz-container">
-    <div class="quiz-question">Which pillar of OOP is primarily achieved using private fields and public getter/setter methods?</div>
-    <ul class="quiz-options">
-        <li class="quiz-option"><input type="radio" name="q2_0" id="q2_0a" data-correct="true"><label for="q2_0a">Encapsulation</label></li>
-        <li class="quiz-option"><input type="radio" name="q2_0" id="q2_0b" data-correct="false"><label for="q2_0b">Inheritance</label></li>
-        <li class="quiz-option"><input type="radio" name="q2_0" id="q2_0c" data-correct="false"><label for="q2_0c">Polymorphism</label></li>
-        <li class="quiz-option"><input type="radio" name="q2_0" id="q2_0d" data-correct="false"><label for="q2_0d">Abstraction</label></li>
-    </ul>
-    <button class="quiz-check-btn">Check Answer</button>
-    <div class="quiz-feedback"></div>
+    <div class="quiz-question-wrapper">
+        <div class="quiz-question">1. Which pillar of OOP is primarily achieved using private fields and public getter/setter methods? <span class="quiz-feedback-inline"></span></div>
+        <ul class="quiz-options">
+            <li class="quiz-option"><input type="radio" name="q2_0" id="q2_0a" data-correct="true"><label for="q2_0a">Encapsulation</label></li>
+            <li class="quiz-option"><input type="radio" name="q2_0" id="q2_0b" data-correct="false"><label for="q2_0b">Inheritance</label></li>
+            <li class="quiz-option"><input type="radio" name="q2_0" id="q2_0c" data-correct="false"><label for="q2_0c">Polymorphism</label></li>
+            <li class="quiz-option"><input type="radio" name="q2_0" id="q2_0d" data-correct="false"><label for="q2_0d">Abstraction</label></li>
+        </ul>
+    </div>
+    <button class="quiz-check-btn">Check Answers</button>
+    <div class="quiz-feedback-main"></div>
 </div>
 
 ---

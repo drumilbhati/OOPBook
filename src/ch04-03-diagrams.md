@@ -47,34 +47,30 @@ Think of an Activity Diagram as a glorified flowchart. It shows the flow from on
 ## Module Quiz
 
 <div class="quiz-container">
-    <div class="quiz-question">1. Which diagram is best for modeling the lifecycle of a "Vending Machine"?</div>
-    <ul class="quiz-options">
-        <li class="quiz-option"><input type="radio" name="q_ch04_03_1" id="q_ch04_03_1_a" data-correct="false"><label for="q_ch04_03_1_a">A) Class Diagram.</label></li>
-        <li class="quiz-option"><input type="radio" name="q_ch04_03_1" id="q_ch04_03_1_b" data-correct="true"><label for="q_ch04_03_1_b">B) State Diagram.</label></li>
-        <li class="quiz-option"><input type="radio" name="q_ch04_03_1" id="q_ch04_03_1_c" data-correct="false"><label for="q_ch04_03_1_c">C) Activity Diagram.</label></li>
-    </ul>
-    <button class="quiz-check-btn">Check Answer</button>
-    <div class="quiz-feedback"></div>
-</div>
-
-<div class="quiz-container">
-    <div class="quiz-question">2. In an Activity Diagram, what does a Diamond represent?</div>
-    <ul class="quiz-options">
-        <li class="quiz-option"><input type="radio" name="q_ch04_03_2" id="q_ch04_03_2_a" data-correct="false"><label for="q_ch04_03_2_a">A) A State.</label></li>
-        <li class="quiz-option"><input type="radio" name="q_ch04_03_2" id="q_ch04_03_2_b" data-correct="true"><label for="q_ch04_03_2_b">B) A Decision/Branch.</label></li>
-        <li class="quiz-option"><input type="radio" name="q_ch04_03_2" id="q_ch04_03_2_c" data-correct="false"><label for="q_ch04_03_2_c">C) The start of the process.</label></li>
-    </ul>
-    <button class="quiz-check-btn">Check Answer</button>
-    <div class="quiz-feedback"></div>
-</div>
-
-<div class="quiz-container">
-    <div class="quiz-question">3. If you need to show that two tasks happen simultaneously, you should use:</div>
-    <ul class="quiz-options">
-        <li class="quiz-option"><input type="radio" name="q_ch04_03_3" id="q_ch04_03_3_a" data-correct="true"><label for="q_ch04_03_3_a">A) A Fork (thick line).</label></li>
-        <li class="quiz-option"><input type="radio" name="q_ch04_03_3" id="q_ch04_03_3_b" data-correct="false"><label for="q_ch04_03_3_b">B) A Rounded Rectangle.</label></li>
-        <li class="quiz-option"><input type="radio" name="q_ch04_03_3" id="q_ch04_03_3_c" data-correct="false"><label for="q_ch04_03_3_c">C) A dashed arrow.</label></li>
-    </ul>
-    <button class="quiz-check-btn">Check Answer</button>
-    <div class="quiz-feedback"></div>
+    <div class="quiz-question-wrapper">
+        <div class="quiz-question">1. Which diagram is best for modeling the lifecycle of a "Vending Machine"? <span class="quiz-feedback-inline"></span></div>
+        <ul class="quiz-options">
+            <li class="quiz-option"><input type="radio" name="q_ch04_03_1" id="q_ch04_03_1_a" data-correct="false"><label for="q_ch04_03_1_a">A) Class Diagram.</label></li>
+            <li class="quiz-option"><input type="radio" name="q_ch04_03_1" id="q_ch04_03_1_b" data-correct="true"><label for="q_ch04_03_1_b">B) State Diagram.</label></li>
+            <li class="quiz-option"><input type="radio" name="q_ch04_03_1" id="q_ch04_03_1_c" data-correct="false"><label for="q_ch04_03_1_c">C) Activity Diagram.</label></li>
+        </ul>
+    </div>
+    <div class="quiz-question-wrapper">
+        <div class="quiz-question">2. In an Activity Diagram, what does a Diamond represent? <span class="quiz-feedback-inline"></span></div>
+        <ul class="quiz-options">
+            <li class="quiz-option"><input type="radio" name="q_ch04_03_2" id="q_ch04_03_2_a" data-correct="false"><label for="q_ch04_03_2_a">A) A State.</label></li>
+            <li class="quiz-option"><input type="radio" name="q_ch04_03_2" id="q_ch04_03_2_b" data-correct="true"><label for="q_ch04_03_2_b">B) A Decision/Branch.</label></li>
+            <li class="quiz-option"><input type="radio" name="q_ch04_03_2" id="q_ch04_03_2_c" data-correct="false"><label for="q_ch04_03_2_c">C) The start of the process.</label></li>
+        </ul>
+    </div>
+    <div class="quiz-question-wrapper">
+        <div class="quiz-question">3. If you need to show that two tasks happen simultaneously, you should use: <span class="quiz-feedback-inline"></span></div>
+        <ul class="quiz-options">
+            <li class="quiz-option"><input type="radio" name="q_ch04_03_3" id="q_ch04_03_3_a" data-correct="true"><label for="q_ch04_03_3_a">A) A Fork (thick line).</label></li>
+            <li class="quiz-option"><input type="radio" name="q_ch04_03_3" id="q_ch04_03_3_b" data-correct="false"><label for="q_ch04_03_3_b">B) A Rounded Rectangle.</label></li>
+            <li class="quiz-option"><input type="radio" name="q_ch04_03_3" id="q_ch04_03_3_c" data-correct="false"><label for="q_ch04_03_3_c">C) A dashed arrow.</label></li>
+        </ul>
+    </div>
+    <button class="quiz-check-btn">Check Answers</button>
+    <div class="quiz-feedback-main"></div>
 </div>

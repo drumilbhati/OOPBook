@@ -139,34 +139,38 @@ public class UserLogic {
 ## Module Quiz
 
 <div class="quiz-container">
-    <div class="quiz-question">1. Which principle is violated if a subclass throws an UnsupportedOperationException for a method defined in the parent?</div>
-    <ul class="quiz-options">
-        <li class="quiz-option"><input type="radio" name="q_ch03_03_1" id="q_ch03_03_1_a" data-correct="false"><label for="q_ch03_03_1_a">A) ISP</label></li>
-        <li class="quiz-option"><input type="radio" name="q_ch03_03_1" id="q_ch03_03_1_b" data-correct="true"><label for="q_ch03_03_1_b">B) LSP</label></li>
-        <li class="quiz-option"><input type="radio" name="q_ch03_03_1" id="q_ch03_03_1_c" data-correct="false"><label for="q_ch03_03_1_c">C) DIP</label></li>
-    </ul>
-    <button class="quiz-check-btn">Check Answer</button>
-    <div class="quiz-feedback"></div>
-</div>
+    <div class="quiz-question-wrapper">
+        <div class="quiz-question">1. Which principle is violated if a subclass throws an UnsupportedOperationException for a method defined in the parent?</div>
+        <ul class="quiz-options">
+            <li class="quiz-option"><input type="radio" name="q_ch03_03_1" id="q_ch03_03_1_a" data-correct="false"><label for="q_ch03_03_1_a">A) ISP</label></li>
+            <li class="quiz-option"><input type="radio" name="q_ch03_03_1" id="q_ch03_03_1_b" data-correct="true"><label for="q_ch03_03_1_b">B) LSP</label></li>
+            <li class="quiz-option"><input type="radio" name="q_ch03_03_1" id="q_ch03_03_1_c" data-correct="false"><label for="q_ch03_03_1_c">C) DIP</label></li>
+        </ul>
+        <div class="quiz-feedback"></div>
+    </div>
 
-<div class="quiz-container">
-    <div class="quiz-question">2. What does the "I" in SOLID stand for?</div>
-    <ul class="quiz-options">
-        <li class="quiz-option"><input type="radio" name="q_ch03_03_2" id="q_ch03_03_2_a" data-correct="false"><label for="q_ch03_03_2_a">A) Internal Segregation</label></li>
-        <li class="quiz-option"><input type="radio" name="q_ch03_03_2" id="q_ch03_03_2_b" data-correct="true"><label for="q_ch03_03_2_b">B) Interface Segregation</label></li>
-        <li class="quiz-option"><input type="radio" name="q_ch03_03_2" id="q_ch03_03_2_c" data-correct="false"><label for="q_ch03_03_2_c">C) Instant Substitution</label></li>
-    </ul>
-    <button class="quiz-check-btn">Check Answer</button>
-    <div class="quiz-feedback"></div>
-</div>
+    <div class="quiz-question-wrapper">
+        <div class="quiz-question">2. What does the "I" in SOLID stand for?</div>
+        <ul class="quiz-options">
+            <li class="quiz-option"><input type="radio" name="q_ch03_03_2" id="q_ch03_03_2_a" data-correct="false"><label for="q_ch03_03_2_a">A) Internal Segregation</label></li>
+            <li class="quiz-option"><input type="radio" name="q_ch03_03_2" id="q_ch03_03_2_b" data-correct="true"><label for="q_ch03_03_2_b">B) Interface Segregation</label></li>
+            <li class="quiz-option"><input type="radio" name="q_ch03_03_2" id="q_ch03_03_2_c" data-correct="false"><label for="q_ch03_03_2_c">C) Instant Substitution</label></li>
+        </ul>
+        <div class="quiz-feedback"></div>
+    </div>
 
-<div class="quiz-container">
-    <div class="quiz-question">3. Dependency Inversion suggests that high-level modules should depend on:</div>
-    <ul class="quiz-options">
-        <li class="quiz-option"><input type="radio" name="q_ch03_03_3" id="q_ch03_03_3_a" data-correct="false"><label for="q_ch03_03_3_a">A) Concrete implementations.</label></li>
-        <li class="quiz-option"><input type="radio" name="q_ch03_03_3" id="q_ch03_03_3_b" data-correct="true"><label for="q_ch03_03_3_b">B) Abstractions (Interfaces).</label></li>
-        <li class="quiz-option"><input type="radio" name="q_ch03_03_3" id="q_ch03_03_3_c" data-correct="false"><label for="q_ch03_03_3_c">C) Low-level modules.</label></li>
-    </ul>
-    <button class="quiz-check-btn">Check Answer</button>
-    <div class="quiz-feedback"></div>
+    <div class="quiz-question-wrapper">
+        <div class="quiz-question">3. Dependency Inversion suggests that high-level modules should depend on:</div>
+        <ul class="quiz-options">
+            <li class="quiz-option"><input type="radio" name="q_ch03_03_3" id="q_ch03_03_3_a" data-correct="false"><label for="q_ch03_03_3_a">A) Concrete implementations.</label></li>
+            <li class="quiz-option"><input type="radio" name="q_ch03_03_3" id="q_ch03_03_3_b" data-correct="true"><label for="q_ch03_03_3_b">B) Abstractions (Interfaces).</label></li>
+            <li class="quiz-option"><input type="radio" name="q_ch03_03_3" id="q_ch03_03_3_c" data-correct="false"><label for="q_ch03_03_3_c">C) Low-level modules.</label></li>
+        </ul>
+        <div class="quiz-feedback"></div>
+    </div>
+
+    <div class="quiz-feedback-main">
+        <button class="quiz-check-btn">Check Answers</button>
+        <p class="quiz-result"></p>
+    </div>
 </div>

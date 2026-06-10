@@ -95,34 +95,38 @@ String s = (String) list.get(0); // Compiler adds the cast
 ## Module Quiz
 
 <div class="quiz-container">
-    <div class="quiz-question">1. Why use an enum with fields instead of a simple constant?</div>
-    <ul class="quiz-options">
-        <li class="quiz-option"><input type="radio" name="q_ch03_01_1" id="q_ch03_01_1_a" data-correct="false"><label for="q_ch03_01_1_a">A) To make the code slower.</label></li>
-        <li class="quiz-option"><input type="radio" name="q_ch03_01_1" id="q_ch03_01_1_b" data-correct="true"><label for="q_ch03_01_1_b">B) To encapsulate related data and behavior within the constant itself.</label></li>
-        <li class="quiz-option"><input type="radio" name="q_ch03_01_1" id="q_ch03_01_1_c" data-correct="false"><label for="q_ch03_01_1_c">C) Because enums cannot be used in switch statements.</label></li>
-    </ul>
-    <button class="quiz-check-btn">Check Answer</button>
-    <div class="quiz-feedback"></div>
-</div>
+    <div class="quiz-question-wrapper">
+        <div class="quiz-question">1. Why use an enum with fields instead of a simple constant?</div>
+        <ul class="quiz-options">
+            <li class="quiz-option"><input type="radio" name="q_ch03_01_1" id="q_ch03_01_1_a" data-correct="false"><label for="q_ch03_01_1_a">A) To make the code slower.</label></li>
+            <li class="quiz-option"><input type="radio" name="q_ch03_01_1" id="q_ch03_01_1_b" data-correct="true"><label for="q_ch03_01_1_b">B) To encapsulate related data and behavior within the constant itself.</label></li>
+            <li class="quiz-option"><input type="radio" name="q_ch03_01_1" id="q_ch03_01_1_c" data-correct="false"><label for="q_ch03_01_1_c">C) Because enums cannot be used in switch statements.</label></li>
+        </ul>
+        <div class="quiz-feedback"></div>
+    </div>
 
-<div class="quiz-container">
-    <div class="quiz-question">2. What happens to generic type information at runtime in Java?</div>
-    <ul class="quiz-options">
-        <li class="quiz-option"><input type="radio" name="q_ch03_01_2" id="q_ch03_01_2_a" data-correct="false"><label for="q_ch03_01_2_a">A) It is preserved and used for reflection.</label></li>
-        <li class="quiz-option"><input type="radio" name="q_ch03_01_2" id="q_ch03_01_2_b" data-correct="true"><label for="q_ch03_01_2_b">B) It is "erased" and replaced by bounds or Object.</label></li>
-        <li class="quiz-option"><input type="radio" name="q_ch03_01_2" id="q_ch03_01_2_c" data-correct="false"><label for="q_ch03_01_2_c">C) It is converted into machine code.</label></li>
-    </ul>
-    <button class="quiz-check-btn">Check Answer</button>
-    <div class="quiz-feedback"></div>
-</div>
+    <div class="quiz-question-wrapper">
+        <div class="quiz-question">2. What happens to generic type information at runtime in Java?</div>
+        <ul class="quiz-options">
+            <li class="quiz-option"><input type="radio" name="q_ch03_01_2" id="q_ch03_01_2_a" data-correct="false"><label for="q_ch03_01_2_a">A) It is preserved and used for reflection.</label></li>
+            <li class="quiz-option"><input type="radio" name="q_ch03_01_2" id="q_ch03_01_2_b" data-correct="true"><label for="q_ch03_01_2_b">B) It is "erased" and replaced by bounds or Object.</label></li>
+            <li class="quiz-option"><input type="radio" name="q_ch03_01_2" id="q_ch03_01_2_c" data-correct="false"><label for="q_ch03_01_2_c">C) It is converted into machine code.</label></li>
+        </ul>
+        <div class="quiz-feedback"></div>
+    </div>
 
-<div class="quiz-container">
-    <div class="quiz-question">3. In &lt;T extends Comparable&lt;T&gt;&gt;, what is T allowed to be?</div>
-    <ul class="quiz-options">
-        <li class="quiz-option"><input type="radio" name="q_ch03_01_3" id="q_ch03_01_3_a" data-correct="false"><label for="q_ch03_01_3_a">A) Any class.</label></li>
-        <li class="quiz-option"><input type="radio" name="q_ch03_01_3" id="q_ch03_01_3_b" data-correct="true"><label for="q_ch03_01_3_b">B) Only classes that implement the Comparable interface.</label></li>
-        <li class="quiz-option"><input type="radio" name="q_ch03_01_3" id="q_ch03_01_3_c" data-correct="false"><label for="q_ch03_01_3_c">C) Only subclasses of Object.</label></li>
-    </ul>
-    <button class="quiz-check-btn">Check Answer</button>
-    <div class="quiz-feedback"></div>
+    <div class="quiz-question-wrapper">
+        <div class="quiz-question">3. In &lt;T extends Comparable&lt;T&gt;&gt;, what is T allowed to be?</div>
+        <ul class="quiz-options">
+            <li class="quiz-option"><input type="radio" name="q_ch03_01_3" id="q_ch03_01_3_a" data-correct="false"><label for="q_ch03_01_3_a">A) Any class.</label></li>
+            <li class="quiz-option"><input type="radio" name="q_ch03_01_3" id="q_ch03_01_3_b" data-correct="true"><label for="q_ch03_01_3_b">B) Only classes that implement the Comparable interface.</label></li>
+            <li class="quiz-option"><input type="radio" name="q_ch03_01_3" id="q_ch03_01_3_c" data-correct="false"><label for="q_ch03_01_3_c">C) Only subclasses of Object.</label></li>
+        </ul>
+        <div class="quiz-feedback"></div>
+    </div>
+
+    <div class="quiz-feedback-main">
+        <button class="quiz-check-btn">Check Answers</button>
+        <p class="quiz-result"></p>
+    </div>
 </div>

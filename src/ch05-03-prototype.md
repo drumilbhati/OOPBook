@@ -91,54 +91,44 @@ public class UserProfile {
 ## Module Quiz
 
 <div class="quiz-container">
-    <div class="quiz-question">1. What is the main difference between a shallow copy and a deep copy?</div>
-    <ul class="quiz-options">
-        <li class="quiz-option"><input type="radio" name="q05_03_1" id="q05_03_1_a" data-correct="false"><label for="q05_03_1_a">A) Shallow copy is faster because it uses less memory.</label></li>
-        <li class="quiz-option"><input type="radio" name="q05_03_1" id="q05_03_1_b" data-correct="true"><label for="q05_03_1_b">B) Shallow copy copies references to objects, while deep copy recursively copies the objects themselves.</label></li>
-        <li class="quiz-option"><input type="radio" name="q05_03_1" id="q05_03_1_c" data-correct="false"><label for="q05_03_1_c">C) There is no difference in Java.</label></li>
-    </ul>
-    <button class="quiz-check-btn">Check Answer</button>
-    <div class="quiz-feedback"></div>
-</div>
-
-<div class="quiz-container">
-    <div class="quiz-question">2. Why is using a copy constructor often preferred over implementing Cloneable in Java?</div>
-    <ul class="quiz-options">
-        <li class="quiz-option"><input type="radio" name="q05_03_2" id="q05_03_2_a" data-correct="false"><label for="q05_03_2_a">A) It is part of the Java standard library.</label></li>
-        <li class="quiz-option"><input type="radio" name="q05_03_2" id="q05_03_2_b" data-correct="true"><label for="q05_03_2_b">B) It avoids Cloneable's pitfalls like marker interface issues, handling exceptions, and bypassing constructors.</label></li>
-        <li class="quiz-option"><input type="radio" name="q05_03_2" id="q05_03_2_c" data-correct="false"><label for="q05_03_2_c">C) It is always faster than cloning.</label></li>
-    </ul>
-    <button class="quiz-check-btn">Check Answer</button>
-    <div class="quiz-feedback"></div>
-</div>
-
-<div class="quiz-container">
-    <div class="quiz-question">3. If an object has only int and String fields, will a shallow copy behave differently than a deep copy?</div>
-    <ul class="quiz-options">
-        <li class="quiz-option"><input type="radio" name="q05_03_3" id="q05_03_3_a" data-correct="false"><label for="q05_03_3_a">A) Yes, because Strings are objects.</label></li>
-        <li class="quiz-option"><input type="radio" name="q05_03_3" id="q05_03_3_b" data-correct="true"><label for="q05_03_3_b">B) No, because primitives are copied by value and Strings are immutable.</label></li>
-    </ul>
-    <button class="quiz-check-btn">Check Answer</button>
-    <div class="quiz-feedback"></div>
-</div>
-
-<div class="quiz-container">
-    <div class="quiz-question">4. True/False: The Prototype pattern is useful when object creation is cheaper than object cloning.</div>
-    <ul class="quiz-options">
-        <li class="quiz-option"><input type="radio" name="q05_03_4" id="q05_03_4_a" data-correct="false"><label for="q05_03_4_a">A) True</label></li>
-        <li class="quiz-option"><input type="radio" name="q05_03_4" id="q05_03_4_b" data-correct="true"><label for="q05_03_4_b">B) False</label></li>
-    </ul>
-    <button class="quiz-check-btn">Check Answer</button>
-    <div class="quiz-feedback"></div>
-</div>
-
-<div class="quiz-container">
-    <div class="quiz-question">5. What is the main risk of using a shallow copy in the Prototype pattern for an object containing a list of other objects?</div>
-    <ul class="quiz-options">
-        <li class="quiz-option"><input type="radio" name="q05_03_5" id="q05_03_5_a" data-correct="false"><label for="q05_03_5_a">A) The copy operation will be significantly slower.</label></li>
-        <li class="quiz-option"><input type="radio" name="q05_03_5" id="q05_03_5_b" data-correct="true"><label for="q05_03_5_b">B) Both the original and the cloned object will share the same list instance, so modifying one affects the other.</label></li>
-        <li class="quiz-option"><input type="radio" name="q05_03_5" id="q05_03_5_c" data-correct="false"><label for="q05_03_5_c">C) The cloned object will be automatically garbage collected immediately after creation.</label></li>
-    </ul>
-    <button class="quiz-check-btn">Check Answer</button>
-    <div class="quiz-feedback"></div>
+    <div class="quiz-question-wrapper">
+        <div class="quiz-question">1. What is the main difference between a shallow copy and a deep copy? <span class="quiz-feedback-inline"></span></div>
+        <ul class="quiz-options">
+            <li class="quiz-option"><input type="radio" name="q05_03_1" id="q05_03_1_a" data-correct="false"><label for="q05_03_1_a">A) Shallow copy is faster because it uses less memory.</label></li>
+            <li class="quiz-option"><input type="radio" name="q05_03_1" id="q05_03_1_b" data-correct="true"><label for="q05_03_1_b">B) Shallow copy copies references to objects, while deep copy recursively copies the objects themselves.</label></li>
+            <li class="quiz-option"><input type="radio" name="q05_03_1" id="q05_03_1_c" data-correct="false"><label for="q05_03_1_c">C) There is no difference in Java.</label></li>
+        </ul>
+    </div>
+    <div class="quiz-question-wrapper">
+        <div class="quiz-question">2. Why is using a copy constructor often preferred over implementing Cloneable in Java? <span class="quiz-feedback-inline"></span></div>
+        <ul class="quiz-options">
+            <li class="quiz-option"><input type="radio" name="q05_03_2" id="q05_03_2_a" data-correct="false"><label for="q05_03_2_a">A) It is part of the Java standard library.</label></li>
+            <li class="quiz-option"><input type="radio" name="q05_03_2" id="q05_03_2_b" data-correct="true"><label for="q05_03_2_b">B) It avoids Cloneable's pitfalls like marker interface issues, handling exceptions, and bypassing constructors.</label></li>
+            <li class="quiz-option"><input type="radio" name="q05_03_2" id="q05_03_2_c" data-correct="false"><label for="q05_03_2_c">C) It is always faster than cloning.</label></li>
+        </ul>
+    </div>
+    <div class="quiz-question-wrapper">
+        <div class="quiz-question">3. If an object has only int and String fields, will a shallow copy behave differently than a deep copy? <span class="quiz-feedback-inline"></span></div>
+        <ul class="quiz-options">
+            <li class="quiz-option"><input type="radio" name="q05_03_3" id="q05_03_3_a" data-correct="false"><label for="q05_03_3_a">A) Yes, because Strings are objects.</label></li>
+            <li class="quiz-option"><input type="radio" name="q05_03_3" id="q05_03_3_b" data-correct="true"><label for="q05_03_3_b">B) No, because primitives are copied by value and Strings are immutable.</label></li>
+        </ul>
+    </div>
+    <div class="quiz-question-wrapper">
+        <div class="quiz-question">4. True/False: The Prototype pattern is useful when object creation is cheaper than object cloning. <span class="quiz-feedback-inline"></span></div>
+        <ul class="quiz-options">
+            <li class="quiz-option"><input type="radio" name="q05_03_4" id="q05_03_4_a" data-correct="false"><label for="q05_03_4_a">A) True</label></li>
+            <li class="quiz-option"><input type="radio" name="q05_03_4" id="q05_03_4_b" data-correct="true"><label for="q05_03_4_b">B) False</label></li>
+        </ul>
+    </div>
+    <div class="quiz-question-wrapper">
+        <div class="quiz-question">5. What is the main risk of using a shallow copy in the Prototype pattern for an object containing a list of other objects? <span class="quiz-feedback-inline"></span></div>
+        <ul class="quiz-options">
+            <li class="quiz-option"><input type="radio" name="q05_03_5" id="q05_03_5_a" data-correct="false"><label for="q05_03_5_a">A) The copy operation will be significantly slower.</label></li>
+            <li class="quiz-option"><input type="radio" name="q05_03_5" id="q05_03_5_b" data-correct="true"><label for="q05_03_5_b">B) Both the original and the cloned object will share the same list instance, so modifying one affects the other.</label></li>
+            <li class="quiz-option"><input type="radio" name="q05_03_5" id="q05_03_5_c" data-correct="false"><label for="q05_03_5_c">C) The cloned object will be automatically garbage collected immediately after creation.</label></li>
+        </ul>
+    </div>
+    <button class="quiz-check-btn">Check Answers</button>
+    <div class="quiz-feedback-main"></div>
 </div>

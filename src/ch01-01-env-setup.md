@@ -41,13 +41,15 @@ While modern IDEs like IntelliJ IDEA or Eclipse handle much of this for you, a s
 In Low-Level Design, we care about how our objects reside in memory and how the JVM manages resources. Understanding that your code is transformed into bytecode and managed by the JVM is the first step in writing performant, scalable systems.
 
 <div class="quiz-container">
-    <div class="quiz-question">Which component is responsible for converting Java Bytecode into machine-specific instructions during execution?</div>
-    <ul class="quiz-options">
-        <li class="quiz-option"><input type="radio" name="q_env_1" id="q_env_1_a" data-correct="false"><label for="q_env_1_a">JDK</label></li>
-        <li class="quiz-option"><input type="radio" name="q_env_1" id="q_env_1_b" data-correct="false"><label for="q_env_1_b">JRE</label></li>
-        <li class="quiz-option"><input type="radio" name="q_env_1" id="q_env_1_c" data-correct="true"><label for="q_env_1_c">JVM</label></li>
-        <li class="quiz-option"><input type="radio" name="q_env_1" id="q_env_1_d" data-correct="false"><label for="q_env_1_d">Javac</label></li>
-    </ul>
-    <button class="quiz-check-btn">Check Answer</button>
-    <div class="quiz-feedback"></div>
+    <div class="quiz-question-wrapper">
+        <div class="quiz-question">1. Which component is responsible for converting Java Bytecode into machine-specific instructions during execution? <span class="quiz-feedback-inline"></span></div>
+        <ul class="quiz-options">
+            <li class="quiz-option"><input type="radio" name="q_env_1" id="q_env_1_a" data-correct="false"><label for="q_env_1_a">JDK</label></li>
+            <li class="quiz-option"><input type="radio" name="q_env_1" id="q_env_1_b" data-correct="false"><label for="q_env_1_b">JRE</label></li>
+            <li class="quiz-option"><input type="radio" name="q_env_1" id="q_env_1_c" data-correct="true"><label for="q_env_1_c">JVM</label></li>
+            <li class="quiz-option"><input type="radio" name="q_env_1" id="q_env_1_d" data-correct="false"><label for="q_env_1_d">Javac</label></li>
+        </ul>
+    </div>
+    <button class="quiz-check-btn">Check Answers</button>
+    <div class="quiz-feedback-main"></div>
 </div>
