@@ -168,7 +168,7 @@ class Ticket {
     <div class="quiz-question">3. In a multi-floor parking lot, what is the most efficient way to track availability?</div>
     <ul class="quiz-options">
         <li class="quiz-option"><input type="radio" name="q_ch08_01_3" id="q_ch08_01_3_a" data-correct="false"><label for="q_ch08_01_3_a">A) Scanning every slot every time a car enters.</label></li>
-        <li class="quiz-option"><input type="radio" name="q_ch08_01_3" id="q_ch08_01_3_b" data-correct="true"><label for="q_ch08_01_3_b">B) Keeping a `Map<VehicleType, Queue<ParkingSlot>>` for free spots.</label></li>
+        <li class="quiz-option"><input type="radio" name="q_ch08_01_3" id="q_ch08_01_3_b" data-correct="true"><label for="q_ch08_01_3_b">B) Keeping a `Map&lt;VehicleType, Queue&lt;ParkingSlot&gt;&gt;` for free spots.</label></li>
         <li class="quiz-option"><input type="radio" name="q_ch08_01_3" id="q_ch08_01_3_c" data-correct="false"><label for="q_ch08_01_3_c">C) Not tracking it; just let the driver find a spot.</label></li>
         <li class="quiz-option"><input type="radio" name="q_ch08_01_3" id="q_ch08_01_3_d" data-correct="false"><label for="q_ch08_01_3_d">D) Using a Global lock on the `ParkingLot` class.</label></li>
     </ul>
