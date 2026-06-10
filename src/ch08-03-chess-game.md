@@ -132,36 +132,37 @@ class Game {
 
 ## Module Quiz
 
-1.  **Which pattern is most effective for implementing the "Undo" feature in a Chess game?**
-    *   A) Singleton
-    *   B) Command
-    *   C) Observer
-    *   D) Decorator
-
-2.  **Why should the `Piece` class be abstract rather than an interface?**
-    *   A) Interfaces cannot have methods.
-    *   B) To provide common properties like `color` and `isKilled` to all subclasses.
-    *   C) Abstract classes are faster than interfaces.
-    *   D) It doesn't matter; both are the same.
-
-3.  **How would you handle "Checkmate" detection in this design?**
-    *   A) Inside the `Piece` class.
-    *   B) In the `Game` class, by iterating through all possible moves of the current player and checking if any move removes the "Check".
-    *   C) By asking the opponent if they are in checkmate.
-    *   D) Checkmate is not part of LLD.
-
----
-*Answers: 1-B, 2-B, 3-B*
-
----
-### Module Quiz
+<div class="quiz-container">
+    <div class="quiz-question">1. Which pattern is most effective for implementing the "Undo" feature in a Chess game?</div>
+    <ul class="quiz-options">
+        <li class="quiz-option"><input type="radio" name="q_ch08_03_1" id="q_ch08_03_1_a" data-correct="false"><label for="q_ch08_03_1_a">A) Singleton</label></li>
+        <li class="quiz-option"><input type="radio" name="q_ch08_03_1" id="q_ch08_03_1_b" data-correct="true"><label for="q_ch08_03_1_b">B) Command</label></li>
+        <li class="quiz-option"><input type="radio" name="q_ch08_03_1" id="q_ch08_03_1_c" data-correct="false"><label for="q_ch08_03_1_c">C) Observer</label></li>
+        <li class="quiz-option"><input type="radio" name="q_ch08_03_1" id="q_ch08_03_1_d" data-correct="false"><label for="q_ch08_03_1_d">D) Decorator</label></li>
+    </ul>
+    <button class="quiz-check-btn">Check Answer</button>
+    <div class="quiz-feedback"></div>
+</div>
 
 <div class="quiz-container">
-    <div class="quiz-question">Which pattern is best for implementing an "Undo" feature in a game like Chess?</div>
+    <div class="quiz-question">2. Why should the `Piece` class be abstract rather than an interface?</div>
     <ul class="quiz-options">
-        <li class="quiz-option"><input type="radio" name="q08_03" id="q08_03_a" data-correct="false"><label for="q08_03_a">Factory Method</label></li>
-        <li class="quiz-option"><input type="radio" name="q08_03" id="q08_03_b" data-correct="true"><label for="q08_03_b">Command</label></li>
-        <li class="quiz-option"><input type="radio" name="q08_03" id="q08_03_c" data-correct="false"><label for="q08_03_c">Adapter</label></li>
+        <li class="quiz-option"><input type="radio" name="q_ch08_03_2" id="q_ch08_03_2_a" data-correct="false"><label for="q_ch08_03_2_a">A) Interfaces cannot have methods.</label></li>
+        <li class="quiz-option"><input type="radio" name="q_ch08_03_2" id="q_ch08_03_2_b" data-correct="true"><label for="q_ch08_03_2_b">B) To provide common properties like `color` and `isKilled` to all subclasses.</label></li>
+        <li class="quiz-option"><input type="radio" name="q_ch08_03_2" id="q_ch08_03_2_c" data-correct="false"><label for="q_ch08_03_2_c">C) Abstract classes are faster than interfaces.</label></li>
+        <li class="quiz-option"><input type="radio" name="q_ch08_03_2" id="q_ch08_03_2_d" data-correct="false"><label for="q_ch08_03_2_d">D) It doesn't matter; both are the same.</label></li>
+    </ul>
+    <button class="quiz-check-btn">Check Answer</button>
+    <div class="quiz-feedback"></div>
+</div>
+
+<div class="quiz-container">
+    <div class="quiz-question">3. How would you handle "Checkmate" detection in this design?</div>
+    <ul class="quiz-options">
+        <li class="quiz-option"><input type="radio" name="q_ch08_03_3" id="q_ch08_03_3_a" data-correct="false"><label for="q_ch08_03_3_a">A) Inside the `Piece` class.</label></li>
+        <li class="quiz-option"><input type="radio" name="q_ch08_03_3" id="q_ch08_03_3_b" data-correct="true"><label for="q_ch08_03_3_b">B) In the `Game` class, by iterating through all possible moves of the current player and checking if any move removes the "Check".</label></li>
+        <li class="quiz-option"><input type="radio" name="q_ch08_03_3" id="q_ch08_03_3_c" data-correct="false"><label for="q_ch08_03_3_c">C) By asking the opponent if they are in checkmate.</label></li>
+        <li class="quiz-option"><input type="radio" name="q_ch08_03_3" id="q_ch08_03_3_d" data-correct="false"><label for="q_ch08_03_3_d">D) Checkmate is not part of LLD.</label></li>
     </ul>
     <button class="quiz-check-btn">Check Answer</button>
     <div class="quiz-feedback"></div>

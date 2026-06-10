@@ -62,32 +62,34 @@ public class Duck {
 
 ## Module Quiz
 
-1. **Which relationship represents Composition?**
-   - A) Is-a
-   - B) Has-a
-   - C) Was-a
-
-2. **What is a major disadvantage of deep inheritance hierarchies?**
-   - A) They are too fast.
-   - B) They make the code rigid and hard to modify (Fragile Base Class).
-   - C) They use too little memory.
-
-3. **Can you change a class's parent at runtime in Java?**
-   - A) Yes, using the `extends` keyword.
-   - B) No, inheritance is static.
-   - C) Only if the parent is an interface.
-
-**Answers:** 1: B, 2: B, 3: B
-
----
-### Module Quiz
+<div class="quiz-container">
+    <div class="quiz-question">1. Which relationship represents Composition?</div>
+    <ul class="quiz-options">
+        <li class="quiz-option"><input type="radio" name="q_ch03_04_1" id="q_ch03_04_1_a" data-correct="false"><label for="q_ch03_04_1_a">A) Is-a</label></li>
+        <li class="quiz-option"><input type="radio" name="q_ch03_04_1" id="q_ch03_04_1_b" data-correct="true"><label for="q_ch03_04_1_b">B) Has-a</label></li>
+        <li class="quiz-option"><input type="radio" name="q_ch03_04_1" id="q_ch03_04_1_c" data-correct="false"><label for="q_ch03_04_1_c">C) Was-a</label></li>
+    </ul>
+    <button class="quiz-check-btn">Check Answer</button>
+    <div class="quiz-feedback"></div>
+</div>
 
 <div class="quiz-container">
-    <div class="quiz-question">Why is "Composition over Inheritance" often recommended in Low-Level Design?</div>
+    <div class="quiz-question">2. What is a major disadvantage of deep inheritance hierarchies?</div>
     <ul class="quiz-options">
-        <li class="quiz-option"><input type="radio" name="q03_04" id="q03_04_a" data-correct="false"><label for="q03_04_a">Because inheritance is not supported in modern Java.</label></li>
-        <li class="quiz-option"><input type="radio" name="q03_04" id="q03_04_b" data-correct="true"><label for="q03_04_b">Because composition provides more flexibility by allowing behaviors to be swapped at runtime.</label></li>
-        <li class="quiz-option"><input type="radio" name="q03_04" id="q03_04_c" data-correct="false"><label for="q03_04_c">Because composition makes the code slower but more secure.</label></li>
+        <li class="quiz-option"><input type="radio" name="q_ch03_04_2" id="q_ch03_04_2_a" data-correct="false"><label for="q_ch03_04_2_a">A) They are too fast.</label></li>
+        <li class="quiz-option"><input type="radio" name="q_ch03_04_2" id="q_ch03_04_2_b" data-correct="true"><label for="q_ch03_04_2_b">B) They make the code rigid and hard to modify (Fragile Base Class).</label></li>
+        <li class="quiz-option"><input type="radio" name="q_ch03_04_2" id="q_ch03_04_2_c" data-correct="false"><label for="q_ch03_04_2_c">C) They use too little memory.</label></li>
+    </ul>
+    <button class="quiz-check-btn">Check Answer</button>
+    <div class="quiz-feedback"></div>
+</div>
+
+<div class="quiz-container">
+    <div class="quiz-question">3. Can you change a class's parent at runtime in Java?</div>
+    <ul class="quiz-options">
+        <li class="quiz-option"><input type="radio" name="q_ch03_04_3" id="q_ch03_04_3_a" data-correct="false"><label for="q_ch03_04_3_a">A) Yes, using the extends keyword.</label></li>
+        <li class="quiz-option"><input type="radio" name="q_ch03_04_3" id="q_ch03_04_3_b" data-correct="true"><label for="q_ch03_04_3_b">B) No, inheritance is static.</label></li>
+        <li class="quiz-option"><input type="radio" name="q_ch03_04_3" id="q_ch03_04_3_c" data-correct="false"><label for="q_ch03_04_3_c">C) Only if the parent is an interface.</label></li>
     </ul>
     <button class="quiz-check-btn">Check Answer</button>
     <div class="quiz-feedback"></div>

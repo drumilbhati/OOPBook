@@ -120,36 +120,37 @@ A simple `Dispatcher` might assign a request to the elevator that is:
 
 ## Module Quiz
 
-1.  **Which pattern is best for handling the different behaviors of an elevator based on its current activity (Moving vs. Idle)?**
-    *   A) Factory
-    *   B) State
-    *   C) Observer
-    *   D) Singleton
-
-2.  **In the SCAN algorithm, how does the elevator decide its next move?**
-    *   A) It always goes to floor 0 first.
-    *   B) It moves in one direction until all requests in that direction are satisfied.
-    *   C) It moves randomly.
-    *   D) It only moves when it is full.
-
-3.  **What data structure is most efficient for storing requests in an elevator moving UP?**
-    *   A) A Stack
-    *   B) A Min-Priority Queue (to get the nearest floor above)
-    *   C) A simple List
-    *   D) A Hash Map
-
----
-*Answers: 1-B, 2-B, 3-B*
-
----
-### Module Quiz
+<div class="quiz-container">
+    <div class="quiz-question">1. Which pattern is best for handling the different behaviors of an elevator based on its current activity (Moving vs. Idle)?</div>
+    <ul class="quiz-options">
+        <li class="quiz-option"><input type="radio" name="q_ch08_04_1" id="q_ch08_04_1_a" data-correct="false"><label for="q_ch08_04_1_a">A) Factory</label></li>
+        <li class="quiz-option"><input type="radio" name="q_ch08_04_1" id="q_ch08_04_1_b" data-correct="true"><label for="q_ch08_04_1_b">B) State</label></li>
+        <li class="quiz-option"><input type="radio" name="q_ch08_04_1" id="q_ch08_04_1_c" data-correct="false"><label for="q_ch08_04_1_c">C) Observer</label></li>
+        <li class="quiz-option"><input type="radio" name="q_ch08_04_1" id="q_ch08_04_1_d" data-correct="false"><label for="q_ch08_04_1_d">D) Singleton</label></li>
+    </ul>
+    <button class="quiz-check-btn">Check Answer</button>
+    <div class="quiz-feedback"></div>
+</div>
 
 <div class="quiz-container">
-    <div class="quiz-question">Which design pattern is most effective for managing the various operational states of an elevator (e.g., Idle, Moving, Door Open)?</div>
+    <div class="quiz-question">2. In the SCAN algorithm, how does the elevator decide its next move?</div>
     <ul class="quiz-options">
-        <li class="quiz-option"><input type="radio" name="q08_04" id="q08_04_a" data-correct="false"><label for="q08_04_a">Strategy Pattern</label></li>
-        <li class="quiz-option"><input type="radio" name="q08_04" id="q08_04_b" data-correct="true"><label for="q08_04_b">State Pattern</label></li>
-        <li class="quiz-option"><input type="radio" name="q08_04" id="q08_04_c" data-correct="false"><label for="q08_04_c">Decorator Pattern</label></li>
+        <li class="quiz-option"><input type="radio" name="q_ch08_04_2" id="q_ch08_04_2_a" data-correct="false"><label for="q_ch08_04_2_a">A) It always goes to floor 0 first.</label></li>
+        <li class="quiz-option"><input type="radio" name="q_ch08_04_2" id="q_ch08_04_2_b" data-correct="true"><label for="q_ch08_04_2_b">B) It moves in one direction until all requests in that direction are satisfied.</label></li>
+        <li class="quiz-option"><input type="radio" name="q_ch08_04_2" id="q_ch08_04_2_c" data-correct="false"><label for="q_ch08_04_2_c">C) It moves randomly.</label></li>
+        <li class="quiz-option"><input type="radio" name="q_ch08_04_2" id="q_ch08_04_2_d" data-correct="false"><label for="q_ch08_04_2_d">D) It only moves when it is full.</label></li>
+    </ul>
+    <button class="quiz-check-btn">Check Answer</button>
+    <div class="quiz-feedback"></div>
+</div>
+
+<div class="quiz-container">
+    <div class="quiz-question">3. What data structure is most efficient for storing requests in an elevator moving UP?</div>
+    <ul class="quiz-options">
+        <li class="quiz-option"><input type="radio" name="q_ch08_04_3" id="q_ch08_04_3_a" data-correct="false"><label for="q_ch08_04_3_a">A) A Stack</label></li>
+        <li class="quiz-option"><input type="radio" name="q_ch08_04_3" id="q_ch08_04_3_b" data-correct="true"><label for="q_ch08_04_3_b">B) A Min-Priority Queue (to get the nearest floor above)</label></li>
+        <li class="quiz-option"><input type="radio" name="q_ch08_04_3" id="q_ch08_04_3_c" data-correct="false"><label for="q_ch08_04_3_c">C) A simple List</label></li>
+        <li class="quiz-option"><input type="radio" name="q_ch08_04_3" id="q_ch08_04_3_d" data-correct="false"><label for="q_ch08_04_3_d">D) A Hash Map</label></li>
     </ul>
     <button class="quiz-check-btn">Check Answer</button>
     <div class="quiz-feedback"></div>

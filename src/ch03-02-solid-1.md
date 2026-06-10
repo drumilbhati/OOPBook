@@ -101,32 +101,34 @@ public class NotificationSender {
 
 ## Module Quiz
 
-1. **What is the main goal of SRP?**
-   - A) To make classes as large as possible.
-   - B) To ensure a class has only one reason to change, reducing coupling.
-   - C) To allow a class to handle UI and Database logic together.
-
-2. **Which technique is most commonly used to follow OCP?**
-   - A) Massive `if-else` or `switch` blocks.
-   - B) Inheritance and Interfaces.
-   - C) Making all fields public.
-
-3. **If you find yourself modifying an existing class every time a new feature is added, which principle are you likely violating?**
-   - A) SRP
-   - B) OCP
-   - C) LSP
-
-**Answers:** 1: B, 2: B, 3: B
-
----
-### Module Quiz
+<div class="quiz-container">
+    <div class="quiz-question">1. What is the main goal of SRP?</div>
+    <ul class="quiz-options">
+        <li class="quiz-option"><input type="radio" name="q_ch03_02_1" id="q_ch03_02_1_a" data-correct="false"><label for="q_ch03_02_1_a">A) To make classes as large as possible.</label></li>
+        <li class="quiz-option"><input type="radio" name="q_ch03_02_1" id="q_ch03_02_1_b" data-correct="true"><label for="q_ch03_02_1_b">B) To ensure a class has only one reason to change, reducing coupling.</label></li>
+        <li class="quiz-option"><input type="radio" name="q_ch03_02_1" id="q_ch03_02_1_c" data-correct="false"><label for="q_ch03_02_1_c">C) To allow a class to handle UI and Database logic together.</label></li>
+    </ul>
+    <button class="quiz-check-btn">Check Answer</button>
+    <div class="quiz-feedback"></div>
+</div>
 
 <div class="quiz-container">
-    <div class="quiz-question">Which SOLID principle is violated if a class handles both business logic and database persistence?</div>
+    <div class="quiz-question">2. Which technique is most commonly used to follow OCP?</div>
     <ul class="quiz-options">
-        <li class="quiz-option"><input type="radio" name="q03_02" id="q03_02_a" data-correct="true"><label for="q03_02_a">Single Responsibility Principle (SRP)</label></li>
-        <li class="quiz-option"><input type="radio" name="q03_02" id="q03_02_b" data-correct="false"><label for="q03_02_b">Open/Closed Principle (OCP)</label></li>
-        <li class="quiz-option"><input type="radio" name="q03_02" id="q03_02_c" data-correct="false"><label for="q03_02_c">Liskov Substitution Principle (LSP)</label></li>
+        <li class="quiz-option"><input type="radio" name="q_ch03_02_2" id="q_ch03_02_2_a" data-correct="false"><label for="q_ch03_02_2_a">A) Massive if-else or switch blocks.</label></li>
+        <li class="quiz-option"><input type="radio" name="q_ch03_02_2" id="q_ch03_02_2_b" data-correct="true"><label for="q_ch03_02_2_b">B) Inheritance and Interfaces.</label></li>
+        <li class="quiz-option"><input type="radio" name="q_ch03_02_2" id="q_ch03_02_2_c" data-correct="false"><label for="q_ch03_02_2_c">C) Making all fields public.</label></li>
+    </ul>
+    <button class="quiz-check-btn">Check Answer</button>
+    <div class="quiz-feedback"></div>
+</div>
+
+<div class="quiz-container">
+    <div class="quiz-question">3. If you find yourself modifying an existing class every time a new feature is added, which principle are you likely violating?</div>
+    <ul class="quiz-options">
+        <li class="quiz-option"><input type="radio" name="q_ch03_02_3" id="q_ch03_02_3_a" data-correct="false"><label for="q_ch03_02_3_a">A) SRP</label></li>
+        <li class="quiz-option"><input type="radio" name="q_ch03_02_3" id="q_ch03_02_3_b" data-correct="true"><label for="q_ch03_02_3_b">B) OCP</label></li>
+        <li class="quiz-option"><input type="radio" name="q_ch03_02_3" id="q_ch03_02_3_c" data-correct="false"><label for="q_ch03_02_3_c">C) LSP</label></li>
     </ul>
     <button class="quiz-check-btn">Check Answer</button>
     <div class="quiz-feedback"></div>
