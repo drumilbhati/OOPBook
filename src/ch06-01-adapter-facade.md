@@ -95,23 +95,55 @@ class HomeTheaterFacade {
 
 ## Module Quiz
 
-1. Which pattern is used to bridge the gap between two incompatible interfaces?
-2. Does a Facade add new functionality to the subsystem it hides?
-3. How does the Facade pattern help in reducing coupling between the client and the system?
-4. True/False: An Adapter can wrap multiple objects to make them look like one interface.
-
----
-### Module Quiz
-
 <div class="quiz-container">
-    <div class="quiz-question">What is the main goal of the Facade pattern?</div>
+    <div class="quiz-question">1. Which pattern is used to bridge the gap between two incompatible interfaces?</div>
     <ul class="quiz-options">
-        <li class="quiz-option"><input type="radio" name="q06_01" id="q06_01_a" data-correct="false"><label for="q06_01_a">To convert one interface into another that the client expects.</label></li>
-        <li class="quiz-option"><input type="radio" name="q06_01" id="q06_01_b" data-correct="true"><label for="q06_01_b">To provide a simplified interface to a complex subsystem of classes.</label></li>
-        <li class="quiz-option"><input type="radio" name="q06_01" id="q06_01_c" data-correct="false"><label for="q06_01_c">To add new functionality to a legacy system without modifying it.</label></li>
+        <li class="quiz-option"><input type="radio" name="q06_01_1" id="q06_01_1_a" data-correct="true"><label for="q06_01_1_a">A) Adapter</label></li>
+        <li class="quiz-option"><input type="radio" name="q06_01_1" id="q06_01_1_b" data-correct="false"><label for="q06_01_1_b">B) Facade</label></li>
+        <li class="quiz-option"><input type="radio" name="q06_01_1" id="q06_01_1_c" data-correct="false"><label for="q06_01_1_c">C) Decorator</label></li>
     </ul>
     <button class="quiz-check-btn">Check Answer</button>
     <div class="quiz-feedback"></div>
 </div>
 
----
+<div class="quiz-container">
+    <div class="quiz-question">2. Does a Facade add new functionality to the subsystem it hides?</div>
+    <ul class="quiz-options">
+        <li class="quiz-option"><input type="radio" name="q06_01_2" id="q06_01_2_a" data-correct="false"><label for="q06_01_2_a">A) Yes</label></li>
+        <li class="quiz-option"><input type="radio" name="q06_01_2" id="q06_01_2_b" data-correct="true"><label for="q06_01_2_b">B) No, it only provides a simplified interface to existing functionality.</label></li>
+    </ul>
+    <button class="quiz-check-btn">Check Answer</button>
+    <div class="quiz-feedback"></div>
+</div>
+
+<div class="quiz-container">
+    <div class="quiz-question">3. How does the Facade pattern help in reducing coupling?</div>
+    <ul class="quiz-options">
+        <li class="quiz-option"><input type="radio" name="q06_01_3" id="q06_01_3_a" data-correct="false"><label for="q06_01_3_a">A) By inheriting from multiple classes.</label></li>
+        <li class="quiz-option"><input type="radio" name="q06_01_3" id="q06_01_3_b" data-correct="true"><label for="q06_01_3_b">B) By providing a single entry point for the client, so it doesn't need to know about the subsystem's internal classes.</label></li>
+        <li class="quiz-option"><input type="radio" name="q06_01_3" id="q06_01_3_c" data-correct="false"><label for="q06_01_3_c">C) By converting one interface to another.</label></li>
+    </ul>
+    <button class="quiz-check-btn">Check Answer</button>
+    <div class="quiz-feedback"></div>
+</div>
+
+<div class="quiz-container">
+    <div class="quiz-question">4. True/False: An Adapter is primarily used for ease of use rather than compatibility.</div>
+    <ul class="quiz-options">
+        <li class="quiz-option"><input type="radio" name="q06_01_4" id="q06_01_4_a" data-correct="false"><label for="q06_01_4_a">A) True</label></li>
+        <li class="quiz-option"><input type="radio" name="q06_01_4" id="q06_01_4_b" data-correct="true"><label for="q06_01_4_b">B) False</label></li>
+    </ul>
+    <button class="quiz-check-btn">Check Answer</button>
+    <div class="quiz-feedback"></div>
+</div>
+
+<div class="quiz-container">
+    <div class="quiz-question">5. What is the main goal of the Facade pattern?</div>
+    <ul class="quiz-options">
+        <li class="quiz-option"><input type="radio" name="q06_01_5" id="q06_01_5_a" data-correct="false"><label for="q06_01_5_a">A) To convert one interface into another that the client expects.</label></li>
+        <li class="quiz-option"><input type="radio" name="q06_01_5" id="q06_01_5_b" data-correct="true"><label for="q06_01_5_b">B) To provide a simplified interface to a complex subsystem of classes.</label></li>
+        <li class="quiz-option"><input type="radio" name="q06_01_5" id="q06_01_5_c" data-correct="false"><label for="q06_01_5_c">C) To add new functionality to a legacy system without modifying it.</label></li>
+    </ul>
+    <button class="quiz-check-btn">Check Answer</button>
+    <div class="quiz-feedback"></div>
+</div>
