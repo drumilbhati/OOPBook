@@ -1,0 +1,8 @@
+[book]
+title = "Low Level Design (LLD) with Java"
+authors = ["drumilbhati"]
+language = "en"
+
+[output.html]
+additional-css = ["theme/custom.css"]
+additional-js = ["theme/custom.js"]
