@@ -108,45 +108,47 @@ class MacFactory implements GUIFactory {
 ## Module Quiz
 
 <div class="quiz-container">
-    <div class="quiz-question-wrapper">
-        <div class="quiz-question">1. Which pattern is better suited for creating a "family" of related objects? <span class="quiz-feedback-inline"></span></div>
-        <ul class="quiz-options">
-            <li class="quiz-option"><input type="radio" name="q05_02_1" id="q05_02_1_a" data-correct="false"><label for="q05_02_1_a">A) Factory Method</label></li>
-            <li class="quiz-option"><input type="radio" name="q05_02_1" id="q05_02_1_b" data-correct="true"><label for="q05_02_1_b">B) Abstract Factory</label></li>
-            <li class="quiz-option"><input type="radio" name="q05_02_1" id="q05_02_1_c" data-correct="false"><label for="q05_02_1_c">C) Singleton</label></li>
-        </ul>
-    </div>
-    <div class="quiz-question-wrapper">
-        <div class="quiz-question">2. How does the Factory Method pattern utilize polymorphism? <span class="quiz-feedback-inline"></span></div>
-        <ul class="quiz-options">
-            <li class="quiz-option"><input type="radio" name="q05_02_2" id="q05_02_2_a" data-correct="false"><label for="q05_02_2_a">A) By using static methods.</label></li>
-            <li class="quiz-option"><input type="radio" name="q05_02_2" id="q05_02_2_b" data-correct="true"><label for="q05_02_2_b">B) It defers instantiation to subclasses, which override the factory method to return specific product types.</label></li>
-            <li class="quiz-option"><input type="radio" name="q05_02_2" id="q05_02_2_c" data-correct="false"><label for="q05_02_2_c">C) By making the product class final.</label></li>
-        </ul>
-    </div>
-    <div class="quiz-question-wrapper">
-        <div class="quiz-question">3. In the Abstract Factory pattern, if you need to add a new product type (e.g., "RadioButton") to the family, what changes are required? <span class="quiz-feedback-inline"></span></div>
-        <ul class="quiz-options">
-            <li class="quiz-option"><input type="radio" name="q05_02_3" id="q05_02_3_a" data-correct="false"><label for="q05_02_3_a">A) No changes are needed.</label></li>
-            <li class="quiz-option"><input type="radio" name="q05_02_3" id="q05_02_3_b" data-correct="true"><label for="q05_02_3_b">B) Both the Abstract Factory interface and all concrete factory implementations must be updated.</label></li>
-            <li class="quiz-option"><input type="radio" name="q05_02_3" id="q05_02_3_c" data-correct="false"><label for="q05_02_3_c">C) Only the client code needs to change.</label></li>
-        </ul>
-    </div>
-    <div class="quiz-question-wrapper">
-        <div class="quiz-question">4. True/False: The Factory Method pattern relies more on inheritance than composition. <span class="quiz-feedback-inline"></span></div>
-        <ul class="quiz-options">
-            <li class="quiz-option"><input type="radio" name="q05_02_4" id="q05_02_4_a" data-correct="true"><label for="q05_02_4_a">A) True</label></li>
-            <li class="quiz-option"><input type="radio" name="q05_02_4" id="q05_02_4_b" data-correct="false"><label for="q05_02_4_b">B) False</label></li>
-        </ul>
-    </div>
-    <div class="quiz-question-wrapper">
-        <div class="quiz-question">5. What is a primary difference between the Factory Method and the Abstract Factory pattern? <span class="quiz-feedback-inline"></span></div>
-        <ul class="quiz-options">
-            <li class="quiz-option"><input type="radio" name="q05_02_5" id="q05_02_5_a" data-correct="false"><label for="q05_02_5_a">A) Factory Method creates families of products, while Abstract Factory creates a single product.</label></li>
-            <li class="quiz-option"><input type="radio" name="q05_02_5" id="q05_02_5_b" data-correct="true"><label for="q05_02_5_b">B) Factory Method uses inheritance to defer instantiation to subclasses, while Abstract Factory uses object composition to create families of related products.</label></li>
-            <li class="quiz-option"><input type="radio" name="q05_02_5" id="q05_02_5_c" data-correct="false"><label for="q05_02_5_c">C) Factory Method is used for structural design, while Abstract Factory is for behavioral design.</label></li>
-        </ul>
-    </div>
-    <div class="quiz-feedback-main"></div>
-    <button class="quiz-check-btn">Check Answers</button>
+<div class="quiz-question-wrapper">
+<div class="quiz-question">1. Which pattern is better suited for creating a "family" of related objects? <span class="quiz-feedback-inline"></span>
 </div>
+<ul class="quiz-options">
+<li class="quiz-option"><input type="radio" name="q05_02_1" id="q05_02_1_a" data-correct="false"><label for="q05_02_1_a">A) Factory Method</label></li>
+<li class="quiz-option"><input type="radio" name="q05_02_1" id="q05_02_1_b" data-correct="true"><label for="q05_02_1_b">B) Abstract Factory</label></li>
+<li class="quiz-option"><input type="radio" name="q05_02_1" id="q05_02_1_c" data-correct="false"><label for="q05_02_1_c">C) Singleton</label></li>
+</ul>
+</div>
+<div class="quiz-question-wrapper">
+<div class="quiz-question">2. How does the Factory Method pattern utilize polymorphism? <span class="quiz-feedback-inline"></span></div>
+<ul class="quiz-options">
+<li class="quiz-option"><input type="radio" name="q05_02_2" id="q05_02_2_a" data-correct="false"><label for="q05_02_2_a">A) By using static methods.</label></li>
+<li class="quiz-option"><input type="radio" name="q05_02_2" id="q05_02_2_b" data-correct="true"><label for="q05_02_2_b">B) It defers instantiation to subclasses, which override the factory method to return specific product types.</label></li>
+<li class="quiz-option"><input type="radio" name="q05_02_2" id="q05_02_2_c" data-correct="false"><label for="q05_02_2_c">C) By making the product class final.</label></li>
+</ul>
+</div>
+<div class="quiz-question-wrapper">
+<div class="quiz-question">3. In the Abstract Factory pattern, if you need to add a new product type (e.g., "RadioButton") to the family, what changes are required? <span class="quiz-feedback-inline"></span></div>
+<ul class="quiz-options">
+<li class="quiz-option"><input type="radio" name="q05_02_3" id="q05_02_3_a" data-correct="false"><label for="q05_02_3_a">A) No changes are needed.</label></li>
+<li class="quiz-option"><input type="radio" name="q05_02_3" id="q05_02_3_b" data-correct="true"><label for="q05_02_3_b">B) Both the Abstract Factory interface and all concrete factory implementations must be updated.</label></li>
+<li class="quiz-option"><input type="radio" name="q05_02_3" id="q05_02_3_c" data-correct="false"><label for="q05_02_3_c">C) Only the client code needs to change.</label></li>
+</ul>
+</div>
+<div class="quiz-question-wrapper">
+<div class="quiz-question">4. True/False: The Factory Method pattern relies more on inheritance than composition. <span class="quiz-feedback-inline"></span></div>
+<ul class="quiz-options">
+<li class="quiz-option"><input type="radio" name="q05_02_4" id="q05_02_4_a" data-correct="true"><label for="q05_02_4_a">A) True</label></li>
+<li class="quiz-option"><input type="radio" name="q05_02_4" id="q05_02_4_b" data-correct="false"><label for="q05_02_4_b">B) False</label></li>
+</ul>
+</div>
+<div class="quiz-question-wrapper">
+<div class="quiz-question">5. What is a primary difference between the Factory Method and the Abstract Factory pattern? <span class="quiz-feedback-inline"></span></div>
+<ul class="quiz-options">
+<li class="quiz-option"><input type="radio" name="q05_02_5" id="q05_02_5_a" data-correct="false"><label for="q05_02_5_a">A) Factory Method creates families of products, while Abstract Factory creates a single product.</label></li>
+<li class="quiz-option"><input type="radio" name="q05_02_5" id="q05_02_5_b" data-correct="true"><label for="q05_02_5_b">B) Factory Method uses inheritance to defer instantiation to subclasses, while Abstract Factory uses object composition to create families of related products.</label></li>
+<li class="quiz-option"><input type="radio" name="q05_02_5" id="q05_02_5_c" data-correct="false"><label for="q05_02_5_c">C) Factory Method is used for structural design, while Abstract Factory is for behavioral design.</label></li>
+</ul>
+</div>
+<div class="quiz-feedback-main"></div>
+<button class="quiz-check-btn">Check Answers</button>
+</div>
+

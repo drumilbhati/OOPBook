@@ -102,33 +102,32 @@ public class NotificationSender {
 ## Module Quiz
 
 <div class="quiz-container">
-    <div class="quiz-question-wrapper">
-        <div class="quiz-question">1. What is the main goal of SRP? <span class="quiz-feedback-inline"></span></div>
-        <ul class="quiz-options">
-            <li class="quiz-option"><input type="radio" name="q_ch03_02_1" id="q_ch03_02_1_a" data-correct="false"><label for="q_ch03_02_1_a">A) To make classes as large as possible.</label></li>
-            <li class="quiz-option"><input type="radio" name="q_ch03_02_1" id="q_ch03_02_1_b" data-correct="true"><label for="q_ch03_02_1_b">B) To ensure a class has only one reason to change, reducing coupling.</label></li>
-            <li class="quiz-option"><input type="radio" name="q_ch03_02_1" id="q_ch03_02_1_c" data-correct="false"><label for="q_ch03_02_1_c">C) To allow a class to handle UI and Database logic together.</label></li>
-        </ul>
-    </div>
-
-    <div class="quiz-question-wrapper">
-        <div class="quiz-question">2. Which technique is most commonly used to follow OCP? <span class="quiz-feedback-inline"></span></div>
-        <ul class="quiz-options">
-            <li class="quiz-option"><input type="radio" name="q_ch03_02_2" id="q_ch03_02_2_a" data-correct="false"><label for="q_ch03_02_2_a">A) Massive if-else or switch blocks.</label></li>
-            <li class="quiz-option"><input type="radio" name="q_ch03_02_2" id="q_ch03_02_2_b" data-correct="true"><label for="q_ch03_02_2_b">B) Inheritance and Interfaces.</label></li>
-            <li class="quiz-option"><input type="radio" name="q_ch03_02_2" id="q_ch03_02_2_c" data-correct="false"><label for="q_ch03_02_2_c">C) Making all fields public.</label></li>
-        </ul>
-    </div>
-
-    <div class="quiz-question-wrapper">
-        <div class="quiz-question">3. If you find yourself modifying an existing class every time a new feature is added, which principle are you likely violating? <span class="quiz-feedback-inline"></span></div>
-        <ul class="quiz-options">
-            <li class="quiz-option"><input type="radio" name="q_ch03_02_3" id="q_ch03_02_3_a" data-correct="false"><label for="q_ch03_02_3_a">A) SRP</label></li>
-            <li class="quiz-option"><input type="radio" name="q_ch03_02_3" id="q_ch03_02_3_b" data-correct="true"><label for="q_ch03_02_3_b">B) OCP</label></li>
-            <li class="quiz-option"><input type="radio" name="q_ch03_02_3" id="q_ch03_02_3_c" data-correct="false"><label for="q_ch03_02_3_c">C) LSP</label></li>
-        </ul>
-    </div>
-
-    <div class="quiz-feedback-main"></div>
-    <button class="quiz-check-btn">Check Answers</button>
+<div class="quiz-question-wrapper">
+<div class="quiz-question">1. What is the main goal of SRP? <span class="quiz-feedback-inline"></span>
 </div>
+<ul class="quiz-options">
+<li class="quiz-option"><input type="radio" name="q_ch03_02_1" id="q_ch03_02_1_a" data-correct="false"><label for="q_ch03_02_1_a">A) To make classes as large as possible.</label></li>
+<li class="quiz-option"><input type="radio" name="q_ch03_02_1" id="q_ch03_02_1_b" data-correct="true"><label for="q_ch03_02_1_b">B) To ensure a class has only one reason to change, reducing coupling.</label></li>
+<li class="quiz-option"><input type="radio" name="q_ch03_02_1" id="q_ch03_02_1_c" data-correct="false"><label for="q_ch03_02_1_c">C) To allow a class to handle UI and Database logic together.</label></li>
+</ul>
+</div>
+<div class="quiz-question-wrapper">
+<div class="quiz-question">2. Which technique is most commonly used to follow OCP? <span class="quiz-feedback-inline"></span></div>
+<ul class="quiz-options">
+<li class="quiz-option"><input type="radio" name="q_ch03_02_2" id="q_ch03_02_2_a" data-correct="false"><label for="q_ch03_02_2_a">A) Massive if-else or switch blocks.</label></li>
+<li class="quiz-option"><input type="radio" name="q_ch03_02_2" id="q_ch03_02_2_b" data-correct="true"><label for="q_ch03_02_2_b">B) Inheritance and Interfaces.</label></li>
+<li class="quiz-option"><input type="radio" name="q_ch03_02_2" id="q_ch03_02_2_c" data-correct="false"><label for="q_ch03_02_2_c">C) Making all fields public.</label></li>
+</ul>
+</div>
+<div class="quiz-question-wrapper">
+<div class="quiz-question">3. If you find yourself modifying an existing class every time a new feature is added, which principle are you likely violating? <span class="quiz-feedback-inline"></span></div>
+<ul class="quiz-options">
+<li class="quiz-option"><input type="radio" name="q_ch03_02_3" id="q_ch03_02_3_a" data-correct="false"><label for="q_ch03_02_3_a">A) SRP</label></li>
+<li class="quiz-option"><input type="radio" name="q_ch03_02_3" id="q_ch03_02_3_b" data-correct="true"><label for="q_ch03_02_3_b">B) OCP</label></li>
+<li class="quiz-option"><input type="radio" name="q_ch03_02_3" id="q_ch03_02_3_c" data-correct="false"><label for="q_ch03_02_3_c">C) LSP</label></li>
+</ul>
+</div>
+<div class="quiz-feedback-main"></div>
+<button class="quiz-check-btn">Check Answers</button>
+</div>
+

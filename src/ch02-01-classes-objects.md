@@ -45,15 +45,17 @@ Constructors are special methods used to initialize objects.
 > **Design Tip:** In LLD, use **Private Constructors** when you want to prevent instantiation (e.g., in a Singleton pattern or a Utility class).
 
 <div class="quiz-container">
-    <div class="quiz-question-wrapper">
-        <div class="quiz-question">1. What happens if you define a constructor with a return type (e.g., public void MyClass())? <span class="quiz-feedback-inline"></span></div>
-        <ul class="quiz-options">
-            <li class="quiz-option"><input type="radio" name="q_co_1" id="q_co_1_a" data-correct="false"><label for="q_co_1_a">It remains a valid constructor.</label></li>
-            <li class="quiz-option"><input type="radio" name="q_co_1" id="q_co_1_b" data-correct="true"><label for="q_co_1_b">It is treated as a regular method and is no longer a constructor.</label></li>
-            <li class="quiz-option"><input type="radio" name="q_co_1" id="q_co_1_c" data-correct="false"><label for="q_co_1_c">The compiler throws an error.</label></li>
-            <li class="quiz-option"><input type="radio" name="q_co_1" id="q_co_1_d" data-correct="false"><label for="q_co_1_d">It becomes a static initializer.</label></li>
-        </ul>
-    </div>
-    <div class="quiz-feedback-main"></div>
-    <button class="quiz-check-btn">Check Answers</button>
+<div class="quiz-question-wrapper">
+<div class="quiz-question">1. What happens if you define a constructor with a return type (e.g., public void MyClass())? <span class="quiz-feedback-inline"></span>
 </div>
+<ul class="quiz-options">
+<li class="quiz-option"><input type="radio" name="q_co_1" id="q_co_1_a" data-correct="false"><label for="q_co_1_a">It remains a valid constructor.</label></li>
+<li class="quiz-option"><input type="radio" name="q_co_1" id="q_co_1_b" data-correct="true"><label for="q_co_1_b">It is treated as a regular method and is no longer a constructor.</label></li>
+<li class="quiz-option"><input type="radio" name="q_co_1" id="q_co_1_c" data-correct="false"><label for="q_co_1_c">The compiler throws an error.</label></li>
+<li class="quiz-option"><input type="radio" name="q_co_1" id="q_co_1_d" data-correct="false"><label for="q_co_1_d">It becomes a static initializer.</label></li>
+</ul>
+</div>
+<div class="quiz-feedback-main"></div>
+<button class="quiz-check-btn">Check Answers</button>
+</div>
+

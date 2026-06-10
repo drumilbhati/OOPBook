@@ -28,16 +28,17 @@ In this chapter, we will cover the foundational building blocks of Java. If you 
 ### Module 1.0 Quiz
 
 <div class="quiz-container">
-    <div class="quiz-question-wrapper">
-        <div class="quiz-question">1. Which of the following is a core philosophy of Java? <span class="quiz-feedback-inline"></span></div>
-        <ul class="quiz-options">
-            <li class="quiz-option"><input type="radio" name="q1_0" id="q1_0a" data-correct="false"><label for="q1_0a">Write Once, Debug Everywhere</label></li>
-            <li class="quiz-option"><input type="radio" name="q1_0" id="q1_0b" data-correct="true"><label for="q1_0b">Write Once, Run Anywhere</label></li>
-            <li class="quiz-option"><input type="radio" name="q1_0" id="q1_0c" data-correct="false"><label for="q1_0c">Compile Once, Run Never</label></li>
-        </ul>
-    </div>
-    <div class="quiz-feedback-main"></div>
-    <button class="quiz-check-btn">Check Answers</button>
+<div class="quiz-question-wrapper">
+<div class="quiz-question">1. Which of the following is a core philosophy of Java? <span class="quiz-feedback-inline"></span>
+</div>
+<ul class="quiz-options">
+<li class="quiz-option"><input type="radio" name="q1_0" id="q1_0a" data-correct="false"><label for="q1_0a">Write Once, Debug Everywhere</label></li>
+<li class="quiz-option"><input type="radio" name="q1_0" id="q1_0b" data-correct="true"><label for="q1_0b">Write Once, Run Anywhere</label></li>
+<li class="quiz-option"><input type="radio" name="q1_0" id="q1_0c" data-correct="false"><label for="q1_0c">Compile Once, Run Never</label></li>
+</ul>
+</div>
+<div class="quiz-feedback-main"></div>
+<button class="quiz-check-btn">Check Answers</button>
 </div>
 
 ---

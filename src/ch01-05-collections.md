@@ -47,15 +47,17 @@ public class User {
 - Building a thread-safe system? Look into `ConcurrentHashMap` or `CopyOnWriteArrayList`.
 
 <div class="quiz-container">
-    <div class="quiz-question-wrapper">
-        <div class="quiz-question">1. Which collection should be used if you need to maintain unique elements in their natural sorted order? <span class="quiz-feedback-inline"></span></div>
-        <ul class="quiz-options">
-            <li class="quiz-option"><input type="radio" name="q_coll_1" id="q_coll_1_a" data-correct="false"><label for="q_coll_1_a">ArrayList</label></li>
-            <li class="quiz-option"><input type="radio" name="q_coll_1" id="q_coll_1_b" data-correct="false"><label for="q_coll_1_b">HashSet</label></li>
-            <li class="quiz-option"><input type="radio" name="q_coll_1" id="q_coll_1_c" data-correct="true"><label for="q_coll_1_c">TreeSet</label></li>
-            <li class="quiz-option"><input type="radio" name="q_coll_1" id="q_coll_1_d" data-correct="false"><label for="q_coll_1_d">LinkedHashSet</label></li>
-        </ul>
-    </div>
-    <div class="quiz-feedback-main"></div>
-    <button class="quiz-check-btn">Check Answers</button>
+<div class="quiz-question-wrapper">
+<div class="quiz-question">1. Which collection should be used if you need to maintain unique elements in their natural sorted order? <span class="quiz-feedback-inline"></span>
 </div>
+<ul class="quiz-options">
+<li class="quiz-option"><input type="radio" name="q_coll_1" id="q_coll_1_a" data-correct="false"><label for="q_coll_1_a">ArrayList</label></li>
+<li class="quiz-option"><input type="radio" name="q_coll_1" id="q_coll_1_b" data-correct="false"><label for="q_coll_1_b">HashSet</label></li>
+<li class="quiz-option"><input type="radio" name="q_coll_1" id="q_coll_1_c" data-correct="true"><label for="q_coll_1_c">TreeSet</label></li>
+<li class="quiz-option"><input type="radio" name="q_coll_1" id="q_coll_1_d" data-correct="false"><label for="q_coll_1_d">LinkedHashSet</label></li>
+</ul>
+</div>
+<div class="quiz-feedback-main"></div>
+<button class="quiz-check-btn">Check Answers</button>
+</div>
+

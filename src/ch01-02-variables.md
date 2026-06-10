@@ -40,15 +40,17 @@ System.out.println(s1.equals(s3)); // true (same content)
 Most "wrapper" classes (`Integer`, `Double`, `String`) are immutable. Once created, their state cannot be changed. This makes them thread-safe by default—a huge advantage in distributed systems design.
 
 <div class="quiz-container">
-    <div class="quiz-question-wrapper">
-        <div class="quiz-question">1. Where is the actual object data of a Reference type stored in Java? <span class="quiz-feedback-inline"></span></div>
-        <ul class="quiz-options">
-            <li class="quiz-option"><input type="radio" name="q_var_1" id="q_var_1_a" data-correct="false"><label for="q_var_1_a">Stack</label></li>
-            <li class="quiz-option"><input type="radio" name="q_var_1" id="q_var_1_b" data-correct="true"><label for="q_var_1_b">Heap</label></li>
-            <li class="quiz-option"><input type="radio" name="q_var_1" id="q_var_1_c" data-correct="false"><label for="q_var_1_c">String Pool only</label></li>
-            <li class="quiz-option"><input type="radio" name="q_var_1" id="q_var_1_d" data-correct="false"><label for="q_var_1_d">Metaspace</label></li>
-        </ul>
-    </div>
-    <div class="quiz-feedback-main"></div>
-    <button class="quiz-check-btn">Check Answers</button>
+<div class="quiz-question-wrapper">
+<div class="quiz-question">1. Where is the actual object data of a Reference type stored in Java? <span class="quiz-feedback-inline"></span>
 </div>
+<ul class="quiz-options">
+<li class="quiz-option"><input type="radio" name="q_var_1" id="q_var_1_a" data-correct="false"><label for="q_var_1_a">Stack</label></li>
+<li class="quiz-option"><input type="radio" name="q_var_1" id="q_var_1_b" data-correct="true"><label for="q_var_1_b">Heap</label></li>
+<li class="quiz-option"><input type="radio" name="q_var_1" id="q_var_1_c" data-correct="false"><label for="q_var_1_c">String Pool only</label></li>
+<li class="quiz-option"><input type="radio" name="q_var_1" id="q_var_1_d" data-correct="false"><label for="q_var_1_d">Metaspace</label></li>
+</ul>
+</div>
+<div class="quiz-feedback-main"></div>
+<button class="quiz-check-btn">Check Answers</button>
+</div>
+

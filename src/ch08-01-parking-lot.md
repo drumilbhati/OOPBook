@@ -141,36 +141,35 @@ class Ticket {
 ## Module Quiz
 
 <div class="quiz-container">
-    <div class="quiz-question-wrapper">
-        <div class="quiz-question">1. Which design pattern is best suited for handling different pricing models (Flat Rate vs. Hourly)? <span class="quiz-feedback-inline"></span></div>
-        <ul class="quiz-options">
-            <li class="quiz-option"><input type="radio" name="q_ch08_01_1" id="q_ch08_01_1_a" data-correct="false"><label for="q_ch08_01_1_a">A) Observer</label></li>
-            <li class="quiz-option"><input type="radio" name="q_ch08_01_1" id="q_ch08_01_1_b" data-correct="true"><label for="q_ch08_01_1_b">B) Strategy</label></li>
-            <li class="quiz-option"><input type="radio" name="q_ch08_01_1" id="q_ch08_01_1_c" data-correct="false"><label for="q_ch08_01_1_c">C) Factory</label></li>
-            <li class="quiz-option"><input type="radio" name="q_ch08_01_1" id="q_ch08_01_1_d" data-correct="false"><label for="q_ch08_01_1_d">D) Singleton</label></li>
-        </ul>
-    </div>
-
-    <div class="quiz-question-wrapper">
-        <div class="quiz-question">2. Why is the `park()` method in `ParkingSlot` synchronized? <span class="quiz-feedback-inline"></span></div>
-        <ul class="quiz-options">
-            <li class="quiz-option"><input type="radio" name="q_ch08_01_2" id="q_ch08_01_2_a" data-correct="false"><label for="q_ch08_01_2_a">A) To make it faster.</label></li>
-            <li class="quiz-option"><input type="radio" name="q_ch08_01_2" id="q_ch08_01_2_b" data-correct="false"><label for="q_ch08_01_2_b">B) To allow multiple vehicles in one spot.</label></li>
-            <li class="quiz-option"><input type="radio" name="q_ch08_01_2" id="q_ch08_01_2_c" data-correct="true"><label for="q_ch08_01_2_c">C) To prevent race conditions during concurrent parking attempts.</label></li>
-            <li class="quiz-option"><input type="radio" name="q_ch08_01_2" id="q_ch08_01_2_d" data-correct="false"><label for="q_ch08_01_2_d">D) It doesn't need to be synchronized.</label></li>
-        </ul>
-    </div>
-
-    <div class="quiz-question-wrapper">
-        <div class="quiz-question">3. In a multi-floor parking lot, what is the most efficient way to track availability? <span class="quiz-feedback-inline"></span></div>
-        <ul class="quiz-options">
-            <li class="quiz-option"><input type="radio" name="q_ch08_01_3" id="q_ch08_01_3_a" data-correct="false"><label for="q_ch08_01_3_a">A) Scanning every slot every time a car enters.</label></li>
-            <li class="quiz-option"><input type="radio" name="q_ch08_01_3" id="q_ch08_01_3_b" data-correct="true"><label for="q_ch08_01_3_b">B) Keeping a `Map&lt;VehicleType, Queue&lt;ParkingSlot&gt;&gt;` for free spots.</label></li>
-            <li class="quiz-option"><input type="radio" name="q_ch08_01_3" id="q_ch08_01_3_c" data-correct="false"><label for="q_ch08_01_3_c">C) Not tracking it; just let the driver find a spot.</label></li>
-            <li class="quiz-option"><input type="radio" name="q_ch08_01_3" id="q_ch08_01_3_d" data-correct="false"><label for="q_ch08_01_3_d">D) Using a Global lock on the `ParkingLot` class.</label></li>
-        </ul>
-    </div>
-
-    <div class="quiz-feedback-main"></div>
-    <button class="quiz-check-btn">Check Answer</button>
+<div class="quiz-question-wrapper">
+<div class="quiz-question">1. Which design pattern is best suited for handling different pricing models (Flat Rate vs. Hourly)? <span class="quiz-feedback-inline"></span>
 </div>
+<ul class="quiz-options">
+<li class="quiz-option"><input type="radio" name="q_ch08_01_1" id="q_ch08_01_1_a" data-correct="false"><label for="q_ch08_01_1_a">A) Observer</label></li>
+<li class="quiz-option"><input type="radio" name="q_ch08_01_1" id="q_ch08_01_1_b" data-correct="true"><label for="q_ch08_01_1_b">B) Strategy</label></li>
+<li class="quiz-option"><input type="radio" name="q_ch08_01_1" id="q_ch08_01_1_c" data-correct="false"><label for="q_ch08_01_1_c">C) Factory</label></li>
+<li class="quiz-option"><input type="radio" name="q_ch08_01_1" id="q_ch08_01_1_d" data-correct="false"><label for="q_ch08_01_1_d">D) Singleton</label></li>
+</ul>
+</div>
+<div class="quiz-question-wrapper">
+<div class="quiz-question">2. Why is the `park()` method in `ParkingSlot` synchronized? <span class="quiz-feedback-inline"></span></div>
+<ul class="quiz-options">
+<li class="quiz-option"><input type="radio" name="q_ch08_01_2" id="q_ch08_01_2_a" data-correct="false"><label for="q_ch08_01_2_a">A) To make it faster.</label></li>
+<li class="quiz-option"><input type="radio" name="q_ch08_01_2" id="q_ch08_01_2_b" data-correct="false"><label for="q_ch08_01_2_b">B) To allow multiple vehicles in one spot.</label></li>
+<li class="quiz-option"><input type="radio" name="q_ch08_01_2" id="q_ch08_01_2_c" data-correct="true"><label for="q_ch08_01_2_c">C) To prevent race conditions during concurrent parking attempts.</label></li>
+<li class="quiz-option"><input type="radio" name="q_ch08_01_2" id="q_ch08_01_2_d" data-correct="false"><label for="q_ch08_01_2_d">D) It doesn't need to be synchronized.</label></li>
+</ul>
+</div>
+<div class="quiz-question-wrapper">
+<div class="quiz-question">3. In a multi-floor parking lot, what is the most efficient way to track availability? <span class="quiz-feedback-inline"></span></div>
+<ul class="quiz-options">
+<li class="quiz-option"><input type="radio" name="q_ch08_01_3" id="q_ch08_01_3_a" data-correct="false"><label for="q_ch08_01_3_a">A) Scanning every slot every time a car enters.</label></li>
+<li class="quiz-option"><input type="radio" name="q_ch08_01_3" id="q_ch08_01_3_b" data-correct="true"><label for="q_ch08_01_3_b">B) Keeping a `Map&lt;VehicleType, Queue&lt;ParkingSlot&gt;&gt;` for free spots.</label></li>
+<li class="quiz-option"><input type="radio" name="q_ch08_01_3" id="q_ch08_01_3_c" data-correct="false"><label for="q_ch08_01_3_c">C) Not tracking it; just let the driver find a spot.</label></li>
+<li class="quiz-option"><input type="radio" name="q_ch08_01_3" id="q_ch08_01_3_d" data-correct="false"><label for="q_ch08_01_3_d">D) Using a Global lock on the `ParkingLot` class.</label></li>
+</ul>
+</div>
+<div class="quiz-feedback-main"></div>
+<button class="quiz-check-btn">Check Answer</button>
+</div>
+
