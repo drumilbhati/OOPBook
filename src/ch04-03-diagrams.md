@@ -42,65 +42,6 @@ Think of an Activity Diagram as a glorified flowchart. It shows the flow from on
 - **Use State Diagrams** when the behavior of an object changes based on its current state (e.g., you can't "Ship" an order that hasn't been "Paid").
 - **Use Activity Diagrams** to model a complex business process or workflow involving multiple objects and steps.
 
----
-
-## Programming Exercise: Simple Logger Design
-
-### Problem Statement
-Design a simple logging system that can log messages to different destinations (Console and File). 
-
-1.  Identify the core components.
-2.  Use the principles of Abstraction and Polymorphism to ensure that the system can be easily extended with new logging destinations (e.g., `DatabaseLogger`) without changing the main application logic.
-
-### Requirements
-- Create a `Logger` interface with a `log(String message)` method.
-- Implement `ConsoleLogger` and `FileLogger`.
-- Demonstrate the usage by creating a list of loggers and logging a message to all of them.
-
-<details>
-<summary>View Solution</summary>
-
-```java
-import java.util.*;
-
-// Abstraction
-interface Logger {
-    void log(String message);
-}
-
-// Concrete Implementations
-class ConsoleLogger implements Logger {
-    @Override
-    public void log(String message) {
-        System.out.println("[Console] " + message);
-    }
-}
-
-class FileLogger implements Logger {
-    @Override
-    public void log(String message) {
-        System.out.println("[File] Writing to file: " + message);
-    }
-}
-
-// Client Code
-public class Main {
-    public static void main(String[] args) {
-        List<Logger> loggers = new ArrayList<>();
-        loggers.add(new ConsoleLogger());
-        loggers.add(new FileLogger());
-
-        String event = "User logged in";
-        for (Logger logger : loggers) {
-            logger.log(event);
-        }
-    }
-}
-```
-</details>
-
----
-
 ## Module Quiz
 
 <div class="quiz-container">
@@ -108,7 +49,7 @@ public class Main {
 <div class="quiz-question">1. Which diagram is best for modeling the lifecycle of a "Vending Machine"? <span class="quiz-feedback-inline"></span>
 </div>
 <ul class="quiz-options">
-<li class="quiz-option"><input type="radio" name="q_ch04_03_1" id="q_ch04_03_1_a" data-correct="false"><label for="q_ch04_03_1_a">A) Class Diagram.</label></li>
+<li class="quiz-option"><input type="radio" name="q_ch04_03_1" id="q_ch04_03_1_a" data-correct="false"><label for="q_coll_1_a">A) Class Diagram.</label></li>
 <li class="quiz-option"><input type="radio" name="q_ch04_03_1" id="q_ch04_03_1_b" data-correct="true"><label for="q_ch04_03_1_b">B) State Diagram.</label></li>
 <li class="quiz-option"><input type="radio" name="q_ch04_03_1" id="q_ch04_03_1_c" data-correct="false"><label for="q_ch04_03_1_c">C) Activity Diagram.</label></li>
 </ul>
