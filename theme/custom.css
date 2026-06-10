@@ -10,16 +10,16 @@
     padding: 0 20px;
 }
 
-/* Quiz Container - More Prominent & "Fullscreen" */
+/* Quiz Container - Standard Readable Size */
 .quiz-container {
     background-color: var(--quote-bg);
     border-top: 4px solid var(--links);
-    padding: 3em;
-    margin: 4em auto;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    padding: 2.5em;
+    margin: 3em auto; /* Centered with healthy vertical margin */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
     width: 100%;
-    max-width: 1000px; /* Keep the quiz itself readable but prominent */
+    max-width: 800px; /* Standard readable width */
     box-sizing: border-box;
 }
 
