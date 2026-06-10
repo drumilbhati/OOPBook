@@ -165,6 +165,6 @@ Computer myPC = new Computer.Builder("500GB", "16GB")
             <li class="quiz-option"><input type="radio" name="q05_01_4" id="q05_01_4_b" data-correct="true"><label for="q05_01_4_b">B) False</label></li>
         </ul>
     </div>
-    <button class="quiz-check-btn">Check Answers</button>
     <div class="quiz-feedback-main"></div>
+    <button class="quiz-check-btn">Check Answers</button>
 </div>

@@ -129,6 +129,6 @@ public class UserProfile {
             <li class="quiz-option"><input type="radio" name="q05_03_5" id="q05_03_5_c" data-correct="false"><label for="q05_03_5_c">C) The cloned object will be automatically garbage collected immediately after creation.</label></li>
         </ul>
     </div>
-    <button class="quiz-check-btn">Check Answers</button>
     <div class="quiz-feedback-main"></div>
+    <button class="quiz-check-btn">Check Answers</button>
 </div>

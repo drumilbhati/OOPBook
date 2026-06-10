@@ -56,6 +56,6 @@ public class User {
             <li class="quiz-option"><input type="radio" name="q_coll_1" id="q_coll_1_d" data-correct="false"><label for="q_coll_1_d">LinkedHashSet</label></li>
         </ul>
     </div>
-    <button class="quiz-check-btn">Check Answers</button>
     <div class="quiz-feedback-main"></div>
+    <button class="quiz-check-btn">Check Answers</button>
 </div>

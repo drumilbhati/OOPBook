@@ -49,6 +49,6 @@ Most "wrapper" classes (`Integer`, `Double`, `String`) are immutable. Once creat
             <li class="quiz-option"><input type="radio" name="q_var_1" id="q_var_1_d" data-correct="false"><label for="q_var_1_d">Metaspace</label></li>
         </ul>
     </div>
-    <button class="quiz-check-btn">Check Answers</button>
     <div class="quiz-feedback-main"></div>
+    <button class="quiz-check-btn">Check Answers</button>
 </div>

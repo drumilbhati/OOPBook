@@ -34,8 +34,8 @@ There are four fundamental pillars of OOP:
             <li class="quiz-option"><input type="radio" name="q2_0" id="q2_0d" data-correct="false"><label for="q2_0d">Abstraction</label></li>
         </ul>
     </div>
-    <button class="quiz-check-btn">Check Answers</button>
     <div class="quiz-feedback-main"></div>
+    <button class="quiz-check-btn">Check Answers</button>
 </div>
 
 ---

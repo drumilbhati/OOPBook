@@ -147,6 +147,6 @@ class MacFactory implements GUIFactory {
             <li class="quiz-option"><input type="radio" name="q05_02_5" id="q05_02_5_c" data-correct="false"><label for="q05_02_5_c">C) Factory Method is used for structural design, while Abstract Factory is for behavioral design.</label></li>
         </ul>
     </div>
-    <button class="quiz-check-btn">Check Answers</button>
     <div class="quiz-feedback-main"></div>
+    <button class="quiz-check-btn">Check Answers</button>
 </div>

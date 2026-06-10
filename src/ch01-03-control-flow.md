@@ -58,6 +58,6 @@ From a design perspective, if you find yourself with deeply nested `if-else` or 
             <li class="quiz-option"><input type="radio" name="q_cf_1" id="q_cf_1_d" data-correct="false"><label for="q_cf_1_d">Java 17</label></li>
         </ul>
     </div>
-    <button class="quiz-check-btn">Check Answers</button>
     <div class="quiz-feedback-main"></div>
+    <button class="quiz-check-btn">Check Answers</button>
 </div>

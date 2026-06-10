@@ -84,6 +84,6 @@ public class Main {
             <li class="quiz-option"><input type="radio" name="q05_00" id="q05_00_c" data-correct="false"><label for="q05_00_c">To simplify the structure by identifying a simple way to realize relationships between entities.</label></li>
         </ul>
     </div>
-    <button class="quiz-check-btn">Check Answers</button>
     <div class="quiz-feedback-main"></div>
+    <button class="quiz-check-btn">Check Answers</button>
 </div>

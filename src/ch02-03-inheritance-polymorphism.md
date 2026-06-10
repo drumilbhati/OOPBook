@@ -37,17 +37,14 @@ Inheritance creates a tight coupling ("is-a" relationship). In LLD, we often pre
 
 <div class="quiz-container">
     <div class="quiz-question-wrapper">
-        <div class="quiz-question">What determines which version of an overridden method is executed in Java?</div>
+        <div class="quiz-question">What determines which version of an overridden method is executed in Java? <span class="quiz-feedback-inline"></span></div>
         <ul class="quiz-options">
             <li class="quiz-option"><input type="radio" name="q_ip_1" id="q_ip_1_a" data-correct="false"><label for="q_ip_1_a">The type of the reference variable at compile time.</label></li>
             <li class="quiz-option"><input type="radio" name="q_ip_1" id="q_ip_1_b" data-correct="true"><label for="q_ip_1_b">The actual type of the object at runtime.</label></li>
             <li class="quiz-option"><input type="radio" name="q_ip_1" id="q_ip_1_c" data-correct="false"><label for="q_ip_1_c">The order in which classes are defined in the file.</label></li>
             <li class="quiz-option"><input type="radio" name="q_ip_1" id="q_ip_1_d" data-correct="false"><label for="q_ip_1_d">The use of the 'static' keyword.</label></li>
         </ul>
-        <div class="quiz-feedback"></div>
     </div>
-    <div class="quiz-feedback-main">
-        <button class="quiz-check-btn">Check Answer</button>
-        <p class="quiz-result"></p>
-    </div>
+    <div class="quiz-feedback-main"></div>
+    <button class="quiz-check-btn">Check Answer</button>
 </div>

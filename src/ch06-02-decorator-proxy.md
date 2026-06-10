@@ -147,6 +147,6 @@ class ProxyImage implements Image {
             <li class="quiz-option"><input type="radio" name="q06_02_5" id="q06_02_5_c" data-correct="false"><label for="q06_02_5_c">C) Composite</label></li>
         </ul>
     </div>
-    <button class="quiz-check-btn">Check Answers</button>
     <div class="quiz-feedback-main"></div>
+    <button class="quiz-check-btn">Check Answers</button>
 </div>

@@ -77,6 +77,6 @@ Indicates how many instances of one class are linked to one instance of another.
             <li class="quiz-option"><input type="radio" name="q_ch04_02_3" id="q_ch04_02_3_c" data-correct="false"><label for="q_ch04_02_3_c">C) Dependency.</label></li>
         </ul>
     </div>
-    <button class="quiz-check-btn">Check Answers</button>
     <div class="quiz-feedback-main"></div>
+    <button class="quiz-check-btn">Check Answers</button>
 </div>

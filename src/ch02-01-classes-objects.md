@@ -54,6 +54,6 @@ Constructors are special methods used to initialize objects.
             <li class="quiz-option"><input type="radio" name="q_co_1" id="q_co_1_d" data-correct="false"><label for="q_co_1_d">It becomes a static initializer.</label></li>
         </ul>
     </div>
-    <button class="quiz-check-btn">Check Answers</button>
     <div class="quiz-feedback-main"></div>
+    <button class="quiz-check-btn">Check Answers</button>
 </div>

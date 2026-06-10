@@ -36,6 +36,6 @@ void modify(int x, Balloon b) {
             <li class="quiz-option"><input type="radio" name="q_meth_1" id="q_meth_1_d" data-correct="false"><label for="q_meth_1_d">The object is moved from the caller's stack to the callee's stack.</label></li>
         </ul>
     </div>
-    <button class="quiz-check-btn">Check Answers</button>
     <div class="quiz-feedback-main"></div>
+    <button class="quiz-check-btn">Check Answers</button>
 </div>

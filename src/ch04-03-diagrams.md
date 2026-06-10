@@ -71,6 +71,6 @@ Think of an Activity Diagram as a glorified flowchart. It shows the flow from on
             <li class="quiz-option"><input type="radio" name="q_ch04_03_3" id="q_ch04_03_3_c" data-correct="false"><label for="q_ch04_03_3_c">C) A dashed arrow.</label></li>
         </ul>
     </div>
-    <button class="quiz-check-btn">Check Answers</button>
     <div class="quiz-feedback-main"></div>
+    <button class="quiz-check-btn">Check Answers</button>
 </div>

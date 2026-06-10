@@ -36,8 +36,8 @@ In this chapter, we will cover the foundational building blocks of Java. If you 
             <li class="quiz-option"><input type="radio" name="q1_0" id="q1_0c" data-correct="false"><label for="q1_0c">Compile Once, Run Never</label></li>
         </ul>
     </div>
-    <button class="quiz-check-btn">Check Answers</button>
     <div class="quiz-feedback-main"></div>
+    <button class="quiz-check-btn">Check Answers</button>
 </div>
 
 ---

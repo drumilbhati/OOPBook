@@ -94,6 +94,6 @@ class AudioPlayer implements MediaPlayer {
             <li class="quiz-option"><input type="radio" name="q06_00" id="q06_00_c" data-correct="false"><label for="q06_00_c">The communication between objects and how they assign responsibilities.</label></li>
         </ul>
     </div>
-    <button class="quiz-check-btn">Check Answers</button>
     <div class="quiz-feedback-main"></div>
+    <button class="quiz-check-btn">Check Answers</button>
 </div>

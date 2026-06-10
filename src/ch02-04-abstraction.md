@@ -41,17 +41,14 @@ In LLD, always **Program to an Interface, not an Implementation**. This decouple
 
 <div class="quiz-container">
     <div class="quiz-question-wrapper">
-        <div class="quiz-question">Which of the following can have instance variables (non-static, non-final fields)?</div>
+        <div class="quiz-question">Which of the following can have instance variables (non-static, non-final fields)? <span class="quiz-feedback-inline"></span></div>
         <ul class="quiz-options">
             <li class="quiz-option"><input type="radio" name="q_abs_1" id="q_abs_1_a" data-correct="true"><label for="q_abs_1_a">Abstract Class</label></li>
             <li class="quiz-option"><input type="radio" name="q_abs_1" id="q_abs_1_b" data-correct="false"><label for="q_abs_1_b">Interface</label></li>
             <li class="quiz-option"><input type="radio" name="q_abs_1" id="q_abs_1_c" data-correct="false"><label for="q_abs_1_c">Both</label></li>
             <li class="quiz-option"><input type="radio" name="q_abs_1" id="q_abs_1_d" data-correct="false"><label for="q_abs_1_d">Neither</label></li>
         </ul>
-        <div class="quiz-feedback"></div>
     </div>
-    <div class="quiz-feedback-main">
-        <button class="quiz-check-btn">Check Answer</button>
-        <p class="quiz-result"></p>
-    </div>
+    <div class="quiz-feedback-main"></div>
+    <button class="quiz-check-btn">Check Answer</button>
 </div>

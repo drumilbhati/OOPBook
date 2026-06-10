@@ -134,6 +134,6 @@ class HomeTheaterFacade {
             <li class="quiz-option"><input type="radio" name="q06_01_5" id="q06_01_5_c" data-correct="false"><label for="q06_01_5_c">C) To add new functionality to a legacy system without modifying it.</label></li>
         </ul>
     </div>
-    <button class="quiz-check-btn">Check Answers</button>
     <div class="quiz-feedback-main"></div>
+    <button class="quiz-check-btn">Check Answers</button>
 </div>
