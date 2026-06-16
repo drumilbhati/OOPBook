@@ -263,7 +263,10 @@ document.addEventListener('click', (e) => {
             const heightStabilized = stableChecks >= RESTORE_STABLE_CHECKS;
             if (!timedOut && !heightStabilized) {
                 window.setTimeout(attemptRestore, RESTORE_RETRY_MS);
+                return;
             }
+
+            clearPendingBookmark();
         }
 
         attemptRestore();
