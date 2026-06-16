@@ -47,6 +47,10 @@ document.addEventListener('click', (e) => {
 (function readingProgressBookmark() {
     const BOOKMARK_KEY = 'oopbook-bookmark';
     const PENDING_KEY = 'oopbook-pending-bookmark';
+    const RESTORE_RETRY_MS = 100;
+    const RESTORE_MAX_MS = 5000;
+    const RESTORE_STABLE_CHECKS = 5;
+    const RESTORE_TOLERANCE_PX = 4;
 
     const bookmarkToggle = document.getElementById('oopbook-bookmark-toggle');
     const bookmarkMenu = document.getElementById('oopbook-bookmark-menu');
@@ -118,6 +122,10 @@ document.addEventListener('click', (e) => {
         );
     }
 
+    function targetScrollY(bookmark) {
+        return Math.max(bookmark.scrollY || 0, 0);
+    }
+
     function getCurrentBookmark() {
         const max = maxScroll();
         const scrollY = Math.max(window.scrollY || document.documentElement.scrollTop || 0, 0);
@@ -162,9 +170,38 @@ document.addEventListener('click', (e) => {
         window.scrollTo({ top: targetY, behavior: 'smooth' });
     }
 
+    function clearPendingBookmark() {
+        try {
+            localStorage.removeItem(PENDING_KEY);
+        } catch (error) {
+            // Ignore storage cleanup errors.
+        }
+    }
+
+    function safeBookmarkUrl(bookmark) {
+        if (!bookmark || typeof bookmark.href !== 'string') {
+            return null;
+        }
+
+        try {
+            const url = new URL(bookmark.href, window.location.href);
+            const isSafeProtocol = url.protocol === 'http:' || url.protocol === 'https:';
+            const isSameOrigin = url.origin === window.location.origin;
+
+            return isSafeProtocol && isSameOrigin ? url : null;
+        } catch (error) {
+            return null;
+        }
+    }
+
     function goToBookmark() {
         const saved = readBookmark();
         if (!saved) {
+            return;
+        }
+
+        const targetUrl = safeBookmarkUrl(saved);
+        if (!targetUrl) {
             return;
         }
 
@@ -174,7 +211,7 @@ document.addEventListener('click', (e) => {
         }
 
         storageSet(PENDING_KEY, JSON.stringify(saved));
-        window.location.href = saved.href;
+        window.location.href = targetUrl.href;
     }
 
     function toggleMenu(forceOpen) {
@@ -194,17 +231,42 @@ document.addEventListener('click', (e) => {
         try {
             const pendingBookmark = JSON.parse(raw);
             if (pendingBookmark && pendingBookmark.path === currentPath()) {
-                window.setTimeout(() => restoreBookmark(pendingBookmark), 150);
+                retryRestorePendingBookmark(pendingBookmark);
             }
         } catch (error) {
+            clearPendingBookmark();
             // Ignore invalid pending bookmark data.
         }
+    }
 
-        try {
-            localStorage.removeItem(PENDING_KEY);
-        } catch (error) {
-            // Ignore storage cleanup errors.
+    function retryRestorePendingBookmark(bookmark) {
+        const startedAt = Date.now();
+        let lastHeight = 0;
+        let stableChecks = 0;
+
+        function attemptRestore() {
+            const currentHeight = document.documentElement.scrollHeight;
+            stableChecks = currentHeight === lastHeight ? stableChecks + 1 : 0;
+            lastHeight = currentHeight;
+
+            const targetY = targetScrollY(bookmark);
+            window.scrollTo({ top: targetY, behavior: 'auto' });
+
+            const currentY = window.scrollY || document.documentElement.scrollTop || 0;
+            const isRestored = Math.abs(currentY - targetY) <= RESTORE_TOLERANCE_PX;
+            if (isRestored) {
+                clearPendingBookmark();
+                return;
+            }
+
+            const timedOut = Date.now() - startedAt >= RESTORE_MAX_MS;
+            const heightStabilized = stableChecks >= RESTORE_STABLE_CHECKS;
+            if (!timedOut && !heightStabilized) {
+                window.setTimeout(attemptRestore, RESTORE_RETRY_MS);
+            }
         }
+
+        attemptRestore();
     }
 
     bookmarkMenu.style.display = 'none';
