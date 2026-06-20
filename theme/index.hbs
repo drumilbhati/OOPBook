@@ -157,6 +157,14 @@
                             <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
                         </ul>
+                        <button id="oopbook-bookmark-toggle" class="icon-button" type="button" title="Reading progress" aria-label="Reading progress" aria-haspopup="true" aria-expanded="false" aria-controls="oopbook-bookmark-menu">
+                            {{fa "solid" "bookmark"}}
+                        </button>
+                        <ul id="oopbook-bookmark-menu" class="theme-popup oopbook-bookmark-menu" aria-label="Reading progress" role="menu">
+                            <li role="none"><div id="oopbook-bookmark-status" class="oopbook-bookmark-status">No bookmark saved</div></li>
+                            <li role="none"><button id="oopbook-bookmark-go" role="menuitem" type="button">Go to bookmark</button></li>
+                            <li role="none"><button id="oopbook-bookmark-save" role="menuitem" type="button">Save current state</button></li>
+                        </ul>
                         {{#if search_enabled}}
                         <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
                             {{fa "solid" "magnifying-glass"}}
