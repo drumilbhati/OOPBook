@@ -43,3 +43,254 @@ document.addEventListener('click', (e) => {
         mainFeedback.style.display = "block";
     }
 });
+
+(function readingProgressBookmark() {
+    const BOOKMARK_KEY = 'oopbook-bookmark';
+    const PENDING_KEY = 'oopbook-pending-bookmark';
+    const RESTORE_RETRY_MS = 100;
+    const RESTORE_MAX_MS = 5000;
+    const RESTORE_STABLE_CHECKS = 5;
+    const RESTORE_TOLERANCE_PX = 4;
+
+    const bookmarkToggle = document.getElementById('oopbook-bookmark-toggle');
+    const bookmarkMenu = document.getElementById('oopbook-bookmark-menu');
+    const statusText = document.getElementById('oopbook-bookmark-status');
+    const goButton = document.getElementById('oopbook-bookmark-go');
+    const saveButton = document.getElementById('oopbook-bookmark-save');
+
+    if (!bookmarkToggle || !bookmarkMenu || !statusText || !goButton || !saveButton) {
+        return;
+    }
+
+    function storageGet(key) {
+        try {
+            return localStorage.getItem(key);
+        } catch (error) {
+            return null;
+        }
+    }
+
+    function storageSet(key, value) {
+        try {
+            localStorage.setItem(key, value);
+            return true;
+        } catch (error) {
+            return false;
+        }
+    }
+
+    function currentPath() {
+        return window.location.pathname.replace(/\/index\.html$/, '/');
+    }
+
+    function formatPathLabel(path) {
+        const cleanPath = path
+            .replace(/\/index\.html$/, '/')
+            .replace(/^\//, '')
+            .replace(/\/$/, '');
+
+        return cleanPath || 'Home';
+    }
+
+    function readBookmark() {
+        const raw = storageGet(BOOKMARK_KEY);
+        if (!raw) {
+            return null;
+        }
+
+        try {
+            const parsed = JSON.parse(raw);
+            return parsed && typeof parsed === 'object' ? parsed : null;
+        } catch (error) {
+            return null;
+        }
+    }
+
+    function writeBookmark(bookmark) {
+        if (!bookmark) {
+            return;
+        }
+
+        storageSet(BOOKMARK_KEY, JSON.stringify(bookmark));
+    }
+
+    function maxScroll() {
+        return Math.max(
+            document.documentElement.scrollHeight - window.innerHeight,
+            document.body.scrollHeight - window.innerHeight,
+            0
+        );
+    }
+
+    function targetScrollY(bookmark) {
+        return Math.max(bookmark.scrollY || 0, 0);
+    }
+
+    function getCurrentBookmark() {
+        const max = maxScroll();
+        const scrollY = Math.max(window.scrollY || document.documentElement.scrollTop || 0, 0);
+        const scrollPercent = max > 0 ? Math.min((scrollY / max) * 100, 100) : 0;
+
+        return {
+            path: currentPath(),
+            title: document.title,
+            href: `${window.location.origin}${currentPath()}${window.location.search}`,
+            scrollY: Math.round(scrollY),
+            scrollPercent: Math.round(scrollPercent * 10) / 10,
+            updatedAt: new Date().toISOString(),
+        };
+    }
+
+    function updateActionStates() {
+        const saved = readBookmark();
+
+        bookmarkToggle.classList.toggle('oopbook-bookmark-active', Boolean(saved));
+        goButton.disabled = !saved;
+
+        if (!saved) {
+            statusText.textContent = 'No bookmark saved';
+            return;
+        }
+
+        const locationLabel = `${saved.title} (${formatPathLabel(saved.path)})`;
+        statusText.textContent = `${locationLabel} at ${saved.scrollPercent || 0}%`;
+    }
+
+    function saveCurrentState() {
+        writeBookmark(getCurrentBookmark());
+        updateActionStates();
+    }
+
+    function restoreBookmark(bookmark) {
+        if (!bookmark) {
+            return;
+        }
+
+        const targetY = Math.min(bookmark.scrollY || 0, maxScroll());
+        window.scrollTo({ top: targetY, behavior: 'smooth' });
+    }
+
+    function clearPendingBookmark() {
+        try {
+            localStorage.removeItem(PENDING_KEY);
+        } catch (error) {
+            // Ignore storage cleanup errors.
+        }
+    }
+
+    function safeBookmarkUrl(bookmark) {
+        if (!bookmark || typeof bookmark.href !== 'string') {
+            return null;
+        }
+
+        try {
+            const url = new URL(bookmark.href, window.location.href);
+            const isSafeProtocol = url.protocol === 'http:' || url.protocol === 'https:';
+            const isSameOrigin = url.origin === window.location.origin;
+
+            return isSafeProtocol && isSameOrigin ? url : null;
+        } catch (error) {
+            return null;
+        }
+    }
+
+    function goToBookmark() {
+        const saved = readBookmark();
+        if (!saved) {
+            return;
+        }
+
+        const targetUrl = safeBookmarkUrl(saved);
+        if (!targetUrl) {
+            return;
+        }
+
+        if (saved.path === currentPath()) {
+            restoreBookmark(saved);
+            return;
+        }
+
+        storageSet(PENDING_KEY, JSON.stringify(saved));
+        window.location.href = targetUrl.href;
+    }
+
+    function toggleMenu(forceOpen) {
+        const isOpen = bookmarkMenu.style.display === 'block';
+        const shouldOpen = typeof forceOpen === 'boolean' ? forceOpen : !isOpen;
+
+        bookmarkMenu.style.display = shouldOpen ? 'block' : 'none';
+        bookmarkToggle.setAttribute('aria-expanded', shouldOpen ? 'true' : 'false');
+    }
+
+    function restorePendingBookmark() {
+        const raw = storageGet(PENDING_KEY);
+        if (!raw) {
+            return;
+        }
+
+        try {
+            const pendingBookmark = JSON.parse(raw);
+            if (pendingBookmark && pendingBookmark.path === currentPath()) {
+                retryRestorePendingBookmark(pendingBookmark);
+            }
+        } catch (error) {
+            clearPendingBookmark();
+            // Ignore invalid pending bookmark data.
+        }
+    }
+
+    function retryRestorePendingBookmark(bookmark) {
+        const startedAt = Date.now();
+        let lastHeight = 0;
+        let stableChecks = 0;
+
+        function attemptRestore() {
+            const currentHeight = document.documentElement.scrollHeight;
+            stableChecks = currentHeight === lastHeight ? stableChecks + 1 : 0;
+            lastHeight = currentHeight;
+
+            const targetY = targetScrollY(bookmark);
+            window.scrollTo({ top: targetY, behavior: 'auto' });
+
+            const currentY = window.scrollY || document.documentElement.scrollTop || 0;
+            const isRestored = Math.abs(currentY - targetY) <= RESTORE_TOLERANCE_PX;
+            if (isRestored) {
+                clearPendingBookmark();
+                return;
+            }
+
+            const timedOut = Date.now() - startedAt >= RESTORE_MAX_MS;
+            const heightStabilized = stableChecks >= RESTORE_STABLE_CHECKS;
+            if (!timedOut && !heightStabilized) {
+                window.setTimeout(attemptRestore, RESTORE_RETRY_MS);
+                return;
+            }
+
+            clearPendingBookmark();
+        }
+
+        attemptRestore();
+    }
+
+    bookmarkMenu.style.display = 'none';
+    updateActionStates();
+    restorePendingBookmark();
+
+    bookmarkToggle.addEventListener('click', event => {
+        event.stopPropagation();
+        toggleMenu();
+    });
+
+    bookmarkMenu.addEventListener('click', event => {
+        event.stopPropagation();
+    });
+
+    document.addEventListener('click', event => {
+        if (!bookmarkMenu.contains(event.target) && event.target !== bookmarkToggle) {
+            toggleMenu(false);
+        }
+    });
+
+    goButton.addEventListener('click', goToBookmark);
+    saveButton.addEventListener('click', saveCurrentState);
+})();

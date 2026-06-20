@@ -140,3 +140,52 @@
     font-weight: 700;
     color: var(--links);
 }
+
+/* Reading progress bookmark */
+#oopbook-bookmark-toggle.oopbook-bookmark-active {
+    color: var(--links);
+}
+
+.oopbook-bookmark-menu {
+    min-width: 210px;
+    padding: 6px;
+}
+
+.oopbook-bookmark-menu li {
+    list-style: none;
+}
+
+.oopbook-bookmark-status,
+.oopbook-bookmark-menu button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 34px;
+    padding: 6px 10px;
+    border: 0;
+    border-radius: 4px;
+    background: transparent;
+    color: var(--fg);
+    font: inherit;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.oopbook-bookmark-status {
+    color: var(--icons);
+    line-height: 1.4;
+    white-space: normal;
+}
+
+.oopbook-bookmark-menu button {
+    cursor: pointer;
+}
+
+.oopbook-bookmark-menu button:hover:not(:disabled) {
+    background-color: var(--theme-hover);
+}
+
+.oopbook-bookmark-menu button:disabled {
+    cursor: not-allowed;
+    opacity: 0.45;
+}
