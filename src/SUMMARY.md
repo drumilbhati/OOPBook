@@ -45,3 +45,8 @@
     - [Design a Chess Game](./ch08-03-chess-game.md)
     - [Design an Elevator System](./ch08-04-elevator.md)
     - [Chapter 8 Exercise: LLD: Design a Stack Overflow](./ch08-05-exercise.md)
+- [LLD Practice Problems](./ch09-00-practice-problems.md)
+    - [Easy Practice Problems](./ch09-01-easy-problems.md)
+    - [Medium Practice Problems](./ch09-02-medium-problems.md)
+    - [Hard Practice Problems](./ch09-03-hard-problems.md)
+
