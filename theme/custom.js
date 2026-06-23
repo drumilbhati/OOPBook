@@ -57,6 +57,7 @@ document.addEventListener('click', (e) => {
     const statusText = document.getElementById('oopbook-bookmark-status');
     const goButton = document.getElementById('oopbook-bookmark-go');
     const saveButton = document.getElementById('oopbook-bookmark-save');
+    const contentRoot = document.querySelector('#mdbook-content main');
 
     if (!bookmarkToggle || !bookmarkMenu || !statusText || !goButton || !saveButton) {
         return;
@@ -92,18 +93,54 @@ document.addEventListener('click', (e) => {
         return cleanPath || 'Home';
     }
 
-    function readBookmark() {
+    function emptyReaderState() {
+        return {
+            bookmark: null,
+            highlights: {},
+        };
+    }
+
+    function normalizeReaderState(parsed) {
+        if (!parsed || typeof parsed !== 'object') {
+            return emptyReaderState();
+        }
+
+        if ('bookmark' in parsed || 'highlights' in parsed) {
+            return {
+                bookmark: parsed.bookmark || null,
+                highlights: parsed.highlights && typeof parsed.highlights === 'object' ? parsed.highlights : {},
+            };
+        }
+
+        return {
+            bookmark: parsed,
+            highlights: {},
+        };
+    }
+
+    function readReaderState() {
         const raw = storageGet(BOOKMARK_KEY);
         if (!raw) {
-            return null;
+            return emptyReaderState();
         }
 
         try {
             const parsed = JSON.parse(raw);
-            return parsed && typeof parsed === 'object' ? parsed : null;
+            return normalizeReaderState(parsed);
         } catch (error) {
-            return null;
+            return emptyReaderState();
         }
+    }
+
+    function writeReaderState(state) {
+        storageSet(BOOKMARK_KEY, JSON.stringify({
+            bookmark: state.bookmark || null,
+            highlights: state.highlights || {},
+        }));
+    }
+
+    function readBookmark() {
+        return readReaderState().bookmark;
     }
 
     function writeBookmark(bookmark) {
@@ -111,7 +148,9 @@ document.addEventListener('click', (e) => {
             return;
         }
 
-        storageSet(BOOKMARK_KEY, JSON.stringify(bookmark));
+        const state = readReaderState();
+        state.bookmark = bookmark;
+        writeReaderState(state);
     }
 
     function maxScroll() {
@@ -272,9 +311,263 @@ document.addEventListener('click', (e) => {
         attemptRestore();
     }
 
+    function pageHighlights() {
+        const state = readReaderState();
+        return Array.isArray(state.highlights[currentPath()]) ? state.highlights[currentPath()] : [];
+    }
+
+    function writePageHighlights(highlights) {
+        const state = readReaderState();
+        state.highlights[currentPath()] = highlights;
+        writeReaderState(state);
+    }
+
+    function closestElement(node) {
+        return node && node.nodeType === Node.ELEMENT_NODE ? node : node.parentElement;
+    }
+
+    function allowedHighlightBlock(node) {
+        const element = closestElement(node);
+        return element ? element.closest('p, li, blockquote, dd, dt, td, th, h1, h2, h3, h4, h5, h6') : null;
+    }
+
+    function selectionCanBeHighlighted(range) {
+        if (!contentRoot || !contentRoot.contains(range.commonAncestorContainer)) {
+            return false;
+        }
+
+        const startElement = closestElement(range.startContainer);
+        const endElement = closestElement(range.endContainer);
+        if (!startElement || !endElement) {
+            return false;
+        }
+
+        if (
+            startElement.closest('pre, code, button, input, textarea, select') ||
+            endElement.closest('pre, code, button, input, textarea, select') ||
+            startElement.closest('mark.oopbook-highlight') ||
+            endElement.closest('mark.oopbook-highlight')
+        ) {
+            return false;
+        }
+
+        return allowedHighlightBlock(range.startContainer) === allowedHighlightBlock(range.endContainer);
+    }
+
+    function textOffsetFor(node, offset) {
+        const range = document.createRange();
+        range.setStart(contentRoot, 0);
+        range.setEnd(node, offset);
+        return range.toString().length;
+    }
+
+    function rangeFromTextOffsets(startOffset, endOffset) {
+        if (!Number.isFinite(startOffset) || !Number.isFinite(endOffset) || startOffset >= endOffset) {
+            return null;
+        }
+
+        const walker = document.createTreeWalker(contentRoot, NodeFilter.SHOW_TEXT);
+        const range = document.createRange();
+        let currentOffset = 0;
+        let startSet = false;
+        let endSet = false;
+        let node = walker.nextNode();
+
+        while (node) {
+            const nextOffset = currentOffset + node.nodeValue.length;
+
+            if (!startSet && startOffset >= currentOffset && startOffset <= nextOffset) {
+                range.setStart(node, startOffset - currentOffset);
+                startSet = true;
+            }
+
+            if (!endSet && endOffset >= currentOffset && endOffset <= nextOffset) {
+                range.setEnd(node, endOffset - currentOffset);
+                endSet = true;
+                break;
+            }
+
+            currentOffset = nextOffset;
+            node = walker.nextNode();
+        }
+
+        return startSet && endSet ? range : null;
+    }
+
+    function matchingRangeForHighlight(highlight) {
+        const text = typeof highlight.text === 'string' ? highlight.text : '';
+        const prefix = typeof highlight.prefix === 'string' ? highlight.prefix : '';
+        const suffix = typeof highlight.suffix === 'string' ? highlight.suffix : '';
+        if (!text) {
+            return null;
+        }
+
+        let range = rangeFromTextOffsets(highlight.startOffset, highlight.endOffset);
+        if (range && range.toString() === text) {
+            return range;
+        }
+
+        const fullText = contentRoot.textContent;
+        let index = fullText.indexOf(text);
+        while (index !== -1) {
+            const prefixStart = Math.max(0, index - prefix.length);
+            const currentPrefix = fullText.slice(prefixStart, index);
+            const currentSuffix = fullText.slice(index + text.length, index + text.length + suffix.length);
+
+            if (currentPrefix.endsWith(prefix) && currentSuffix.startsWith(suffix)) {
+                range = rangeFromTextOffsets(index, index + text.length);
+                if (range) {
+                    return range;
+                }
+            }
+
+            index = fullText.indexOf(text, index + text.length);
+        }
+
+        return null;
+    }
+
+    function applyHighlight(highlight) {
+        if (!contentRoot || !highlight.text) {
+            return;
+        }
+
+        const range = matchingRangeForHighlight(highlight);
+        if (!range || !selectionCanBeHighlighted(range)) {
+            return;
+        }
+
+        const mark = document.createElement('mark');
+        mark.className = 'oopbook-highlight';
+        mark.dataset.highlightId = highlight.id;
+        mark.title = 'Click to remove highlight';
+
+        try {
+            const fragment = range.extractContents();
+            mark.appendChild(fragment);
+            range.insertNode(mark);
+        } catch (error) {
+            // Ignore ranges that cannot be safely wrapped.
+        }
+    }
+
+    function restoreHighlights() {
+        if (!contentRoot) {
+            return;
+        }
+
+        pageHighlights()
+            .slice()
+            .sort((first, second) => second.startOffset - first.startOffset)
+            .forEach(applyHighlight);
+    }
+
+    function selectedHighlightData(range) {
+        const startOffset = textOffsetFor(range.startContainer, range.startOffset);
+        const endOffset = textOffsetFor(range.endContainer, range.endOffset);
+        const text = range.toString();
+        const fullText = contentRoot.textContent;
+
+        return {
+            id: `hl-${Date.now()}-${Math.random().toString(36).slice(2)}`,
+            text,
+            startOffset,
+            endOffset,
+            prefix: fullText.slice(Math.max(0, startOffset - 40), startOffset),
+            suffix: fullText.slice(endOffset, endOffset + 40),
+            createdAt: new Date().toISOString(),
+        };
+    }
+
+    function saveHighlightFromRange(range) {
+        const highlight = selectedHighlightData(range);
+        if (!highlight.text.trim()) {
+            return;
+        }
+
+        const highlights = pageHighlights();
+        highlights.push(highlight);
+        writePageHighlights(highlights);
+        applyHighlight(highlight);
+    }
+
+    function removeHighlight(mark) {
+        const highlightId = mark.dataset.highlightId;
+        const highlights = pageHighlights().filter(highlight => highlight.id !== highlightId);
+        writePageHighlights(highlights);
+        mark.replaceWith(...mark.childNodes);
+    }
+
+    function initHighlighter() {
+        if (!contentRoot) {
+            return;
+        }
+
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'oopbook-highlight-button';
+        button.textContent = 'Highlight';
+        button.hidden = true;
+        document.body.appendChild(button);
+
+        let activeRange = null;
+
+        function hideButton() {
+            button.hidden = true;
+            activeRange = null;
+        }
+
+        function updateButton() {
+            const selection = window.getSelection();
+            if (!selection || selection.rangeCount === 0 || selection.isCollapsed) {
+                hideButton();
+                return;
+            }
+
+            const range = selection.getRangeAt(0);
+            if (!selectionCanBeHighlighted(range) || !range.toString().trim()) {
+                hideButton();
+                return;
+            }
+
+            activeRange = range.cloneRange();
+            const rect = range.getBoundingClientRect();
+            button.style.left = `${window.scrollX + rect.left + (rect.width / 2)}px`;
+            button.style.top = `${window.scrollY + rect.top - 38}px`;
+            button.hidden = false;
+        }
+
+        button.addEventListener('mousedown', event => event.preventDefault());
+        button.addEventListener('click', () => {
+            if (activeRange) {
+                saveHighlightFromRange(activeRange);
+            }
+
+            const selection = window.getSelection();
+            if (selection) {
+                selection.removeAllRanges();
+            }
+            hideButton();
+        });
+
+        contentRoot.addEventListener('mouseup', () => window.setTimeout(updateButton, 0));
+        contentRoot.addEventListener('keyup', updateButton);
+        document.addEventListener('scroll', hideButton, { passive: true });
+        document.addEventListener('click', event => {
+            const target = closestElement(event.target);
+            const mark = target ? target.closest('mark.oopbook-highlight') : null;
+            if (mark && contentRoot.contains(mark)) {
+                removeHighlight(mark);
+            }
+        });
+
+        restoreHighlights();
+    }
+
     bookmarkMenu.style.display = 'none';
     updateActionStates();
     restorePendingBookmark();
+    initHighlighter();
 
     bookmarkToggle.addEventListener('click', event => {
         event.stopPropagation();
