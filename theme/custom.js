@@ -332,7 +332,7 @@ document.addEventListener('click', (e) => {
     }
 
     function selectionCanBeHighlighted(range) {
-        if (!contentRoot || !contentRoot.contains(range.commonAncestorContainer)) {
+        if (!range || !contentRoot || !contentRoot.contains(range.commonAncestorContainer)) {
             return false;
         }
 
@@ -361,6 +361,25 @@ document.addEventListener('click', (e) => {
         return range.toString().length;
     }
 
+    function trimmedTextRange(range) {
+        if (!contentRoot || !contentRoot.contains(range.commonAncestorContainer)) {
+            return null;
+        }
+
+        const selectedText = range.toString();
+        const trimmedText = selectedText.trim();
+        if (!trimmedText) {
+            return null;
+        }
+
+        const leadingWhitespace = selectedText.search(/\S/);
+        const trailingWhitespace = selectedText.length - selectedText.trimEnd().length;
+        const startOffset = textOffsetFor(range.startContainer, range.startOffset) + leadingWhitespace;
+        const endOffset = textOffsetFor(range.endContainer, range.endOffset) - trailingWhitespace;
+
+        return rangeFromTextOffsets(startOffset, endOffset);
+    }
+
     function rangeFromTextOffsets(startOffset, endOffset) {
         if (!Number.isFinite(startOffset) || !Number.isFinite(endOffset) || startOffset >= endOffset) {
             return null;
@@ -376,7 +395,7 @@ document.addEventListener('click', (e) => {
         while (node) {
             const nextOffset = currentOffset + node.nodeValue.length;
 
-            if (!startSet && startOffset >= currentOffset && startOffset <= nextOffset) {
+            if (!startSet && startOffset >= currentOffset && startOffset < nextOffset) {
                 range.setStart(node, startOffset - currentOffset);
                 startSet = true;
             }
@@ -524,7 +543,7 @@ document.addEventListener('click', (e) => {
                 return;
             }
 
-            const range = selection.getRangeAt(0);
+            const range = trimmedTextRange(selection.getRangeAt(0));
             if (!selectionCanBeHighlighted(range) || !range.toString().trim()) {
                 hideButton();
                 return;
